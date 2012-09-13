@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height:100%;width:100%;">
   <head>
     <meta charset="utf-8">
     <title>ACM Uniandes</title>
@@ -13,6 +13,27 @@
       body {
         /*padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
+      html, body {
+          height: 100%;
+          margin: 0;
+          padding: 0; 
+      }
+      span { 
+          height: 100%;
+          vertical-align: middle;
+          display: inline-block; 
+      }
+      .outer {
+          width: 100%;
+          padding: 0;
+          vertical-align: middle;
+          display: inline-block; 
+      }
+      .inner {   
+          vertical-align: middle;
+          display: inline-block; 
+      }
+
     </style>
     <link href="./lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 
@@ -29,7 +50,7 @@
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
   </head>
 
-  <body>
+  <body style="height:100%;width:100%;">
 
     <div class="navbar navbar-fixed-bottom">
       <div class="navbar-inner">
@@ -55,23 +76,18 @@
         </div>
       </div>
     </div>
-    <header class="hero-unit" style="background: url(./images/acmcover2.png) no-repeat scroll; height: 200px">
-      <!--<img src="./images/logo.png" class="pull-right" style="display: inline-block;">-->
-      <h1>Welcome to ACM Uniandes!</h1>
-      <p style="max-width:775px;">The ACM Student Chapter <a href="http://uniandes.edu.co">@Universidad de los Andes</a> is a group of motivated students passionate about computer science and passionate about experimenting, learning and building cool and useful stuff for our community.</p>
-      <br/>
-      <p><a class="btn btn-primary btn-large">Learn more »</a></p>
-    </header>
-    <div class="container">
-      <div class="row">
-        <div class="span8">
-           <h2>Latest from us:</h2>
-        </div>
-        <div class="span4">
-           <h2>Sidebar:</h2>
-        </div>
-      </div>
+
+
+    <span></span><div class="outer">
+      <span></span><header class="hero-unit inner" style="background: url(./images/acmcover2.png) no-repeat scroll; height: 200px; width:100%;">
+        <!--<img src="./images/logo.png" class="pull-right" style="display: inline-block;">-->
+        <h1>Welcome to ACM Uniandes!</h1>
+        <p style="max-width:775px;">The ACM Student Chapter <a href="http://uniandes.edu.co">@Universidad de los Andes</a> is a group of motivated students passionate about computer science and passionate about experimenting, learning and building awesome stuff for our community.</p>
+        <br/>
+        <p><a class="btn btn-primary btn-large">Learn more »</a></p>
+      </header>
     </div>
+    
 
     <!-- Le javascript
     ================================================== -->
