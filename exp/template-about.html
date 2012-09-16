@@ -73,7 +73,7 @@
       </div>
     </div>
 
-    <div class="container" style="position:absolute;width:100%;">
+    <div class="container" style="width: 100%;">
       <div class="row-fluid">
         <div class="span10 offset1">
           <div class="page-header">
@@ -84,13 +84,13 @@
       <div class="row-fluid">
         <div id="sidebar" class="span2 offset1">
          <ul class="nav nav-pills nav-stacked affix-top" data-spy="affix" data-offset-top="50">
-          <li><a href="#1">1</a></li>
+          <li class="active"><a href="#1">1</a></li>
           <li><a href="#2">2</a></li>
           <li><a href="#3">3</a></li>
           <li><a href="#4">4</a></li>
          </ul>
         </div>
-        <div id="content" class="span8" data-spy="scroll" data-target="#sidebar">
+        <div id="content" class="span8">
           <h2 id="1"> Minecraft rocks my socks </h2>
             <p> Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit 
                 amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
@@ -131,6 +131,7 @@
             <p> Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit 
                 amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
                 tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         </div>
       </div>
     </div>
@@ -142,7 +143,9 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="http://code.jquery.com/jquery-1.8.1.js"></script>
-    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
-
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/js/bootstrap.js"></script>
+	<script type="text/javascript">
+		$('body').scrollspy({target: '#sidebar'});
+	</script>
   </body>
 </html>
