@@ -12,17 +12,31 @@
     <link href="./lib/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="./lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
     <style>
+		body {
+			padding-bottom: 40px;
+		}
 
-    p{
-    text-align:justify;
-    }
-    h2{
-    text-align:center;
-    }
-    a{
-    float:right;
-    }
-    </style>
+		p {
+			text-align: justify;
+		}
+
+		.link-footer {
+			margin-top: 1em;
+			margin-bottom: 1em;
+			color: rgba(255, 255, 255, 0.5);
+		}
+
+		.link-footer:hover {
+			color: #FFFFFF;
+			text-shadow: 0 0 10px rgba(255,255,255,0.25);
+		}
+		h2 {
+			text-align: center;
+		}
+		#content a {
+			float: right;
+		}
+	</style>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -68,60 +82,110 @@
       </div>
     </div>
     <!--Page header-->
-    <div class="container" style="position:absolute;width:100%;height:100%;">
-      <div class="row-fluid"> 
-        <div class="span10 offset1">
-          <div class="page-header">
-            <h1>Proyectos <small> Capitulo ACM - Universidad de los Andes </small></h1>
+    <div class="container" style="width:100%;">
+		<div class="row-fluid">
+			<div class="span10 offset1">
+				<div class="page-header">
+					<h1>Proyectos <small> Capitulo ACM - Universidad de los Andes </small></h1>
+				</div>
+			</div>
+		</div>
+		<!--Two columns for news-->
+		<div id="content" class="row-fluid" style="height:70%">
+			<div class="span5 offset1">
+				<div style="float:left;width:100%;">
+					<h2> Project A </h2>
+					<br />
+					<img src="./images/placeholder_proy.png" class="img-rounded" style="margin-right:auto;margin-left:auto;display:block">
+					<br />
+					<p>
+						Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta
+						sem malesuada magna mollis euismod. Donec sed odio dui. Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+						ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+					</p>
+					<p>
+						Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta
+						sem malesuada magna mollis euismod. Donec sed odio dui. Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+						ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+					</p>
+					<a href="#gimmemore">Read more!</a>
+				</div>
+			</div>
+			<div class="span5">
+				<div style="float:right:width:100%;">
+					<h2> Project B </h2>
+					<p>
+						Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta
+						sem malesuada magna mollis euismod. Donec sed odio dui. Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+						ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+					</p>
+					<br />
+					<img src="./images/placeholder_proy.png" class="img-polaroid" style="margin-right:auto;margin-left:auto;display:block">
+					<br />
+					<p>
+						Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta
+						sem malesuada magna mollis euismod. Donec sed odio dui. Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+						ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+					</p>
+					<a href="#gimmemore">Read more!</a>
+				</div>
+			</div>
+		</div>
+		<!--Pagination business-->
+		<div class="row-fluid">
+			<div class="span10 offset1">
+				<div class="pagination pagination-centered">
+					<ul>
+						<li>
+							<a href="#"><<</a>
+						</li>
+						<li>
+							<a href="#">1</a>
+						</li>
+						<li>
+							<a href="#">2</a>
+						</li>
+						<li>
+							<a href="#">3</a>
+						</li>
+						<li>
+							<a href="#">>></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+    <div class="container" style="width:100%;">
+      <div id="footer" style="margin-top:5em;text-align: center;">
+        <div class="row-fluid" style="background-color:#252525;padding:0.8em 0 0.4em">
+          <div class="span2 offset2">
+           <a class="link-footer" href="http://www.uniandes.edu.co">Universidad de los Andes</a>
+          </div>
+          <div class="span2">
+           <a class="link-footer" href="http://sistemas.uniandes.edu.co">Departamento ISIS</a>
+          </div>
+          <div class="span2">
+           <a class="link-footer" href="http://acm.uniandes.edu.co/foros">Foros</a>
+          </div>
+          <div class="span2">
+           <a class="link-footer" href="http://www.acm.org">ACM</a>
           </div>
         </div>
-      </div> 
-      <!--Two columns for news-->
-      <div class="row-fluid" style="height:70%">
-        <div class="span5 offset1">
-          <div style="float:left;width:100%;">
-            <h2> Project A </h2>
-            <br /><img src="./images/placeholder_proy.png" class="img-rounded" style="margin-right:auto;margin-left:auto;display:block"><br />
-              <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta
-              sem malesuada magna mollis euismod. Donec sed odio dui. Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-             ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-              <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta
-              sem malesuada magna mollis euismod. Donec sed odio dui. Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-             ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-             <a href="#gimmemore">Read more!</a>
+        <div class="row-fluid" style="background-color:#EEEEEE;color: #333333;">
+         <div class="span3 offset1" style="margin-top:1.5em;">
+          <span id="copyright">&copy; Capitulo ACM - Universidad de los Andes</span>
           </div>
-        </div>
-        <div class="span5">
-          <div style="float:right:width:100%;">
-            <h2> Project B </h2>
-              <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta
-              sem malesuada magna mollis euismod. Donec sed odio dui. Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-             ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-              <br /><img src="./images/placeholder_proy.png" class="img-polaroid" style="margin-right:auto;margin-left:auto;display:block"><br />
-              <p> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta
-              sem malesuada magna mollis euismod. Donec sed odio dui. Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-             ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-             <a href="#gimmemore">Read more!</a>
+          <div class="span2 offset5" style="margin-top:1em;margin-bottom:1em;">
+            <a href="https://facebook.com/ACMUniandes"><img src="./images/facebook2.png"></a> &nbsp;&nbsp;&nbsp;
+            <a href="https://twitter.com/ACMUniandes"><img src="./images/twitter2.png"></a> &nbsp;&nbsp;&nbsp;
+            <a href="https://plus.google.com/u/0/106882729180584555937/"><img src="./images/google-plus.png"></a>
           </div>
-        </div>
+         </div>
       </div>
-      <!--Pagination business-->
-      <div class="row-fluid">
-        <div class="span10 offset1">
-          <div class="pagination pagination-centered">
-            <ul>
-              <li><a href="#"><<</a></li>
-              <li><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">>></a></li>
-            </ul>
-        </div>
-      </div>
-
     </div>
-        
-
+	
 
     
 

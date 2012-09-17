@@ -12,22 +12,34 @@
     <link href="./lib/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="./lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
     <style>
+		body {
+			padding-bottom: 40px;
+		}
+		p {
+			text-align: justify;
+		}
+		.affix {
+			position: fixed;
+			top: 20px;
+			width: 184px;
+		}
+		#content h2 {
+			margin-top: 0px;
+		}
+		#sidebar ul {
+			padding-top: 7px;
+		}
+		.link-footer {
+			margin-top: 1em;
+			margin-bottom: 1em;
+			color: rgba(255, 255, 255, 0.5);
+		}
 
-      p{
-      text-align:justify;
-      }
-      .affix{
-        position: fixed;
-        top: 30px;
-        width: 184px;
-      }
-      #content h2{
-        margin-top: 0px;
-      }
-      #sidebar ul{
-        padding-top: 7px;
-      }
-    </style>
+		.link-footer:hover {
+			color: #FFFFFF;
+			text-shadow: 0 0 10px rgba(255,255,255,0.25);
+		}
+	</style>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -84,10 +96,10 @@
       <div class="row-fluid">
         <div id="sidebar" class="span2 offset1">
          <ul class="nav nav-pills nav-stacked affix-top" data-spy="affix" data-offset-top="50">
-          <li class="active"><a href="#1">1</a></li>
-          <li><a href="#2">2</a></li>
-          <li><a href="#3">3</a></li>
-          <li><a href="#4">4</a></li>
+          <li class="active"><a href="#1">Quiénes somos <i class="icon-chevron-right pull-right"></i></a></li>
+          <li><a href="#2">Qué hacemos <i class="icon-chevron-right pull-right"></i></a></li>
+          <li><a href="#3">Qué esperamos <i class="icon-chevron-right pull-right"></i></a></li>
+          <li><a href="#4">Qué es ACM <i class="icon-chevron-right pull-right"></i></a></li>
          </ul>
         </div>
         <div id="content" class="span8">
@@ -131,11 +143,37 @@
             <p> Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit 
                 amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
                 tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         </div>
       </div>
     </div>
-
+	<div class="container" style="width:100%;">
+      <div id="footer" style="margin-top:5em;text-align: center;">
+        <div class="row-fluid" style="background-color:#252525;padding:0.8em 0 0.4em">
+          <div class="span2 offset2">
+           <a class="link-footer" href="http://www.uniandes.edu.co">Universidad de los Andes</a>
+          </div>
+          <div class="span2">
+           <a class="link-footer" href="http://sistemas.uniandes.edu.co">Departamento ISIS</a>
+          </div>
+          <div class="span2">
+           <a class="link-footer" href="http://acm.uniandes.edu.co/foros">Foros</a>
+          </div>
+          <div class="span2">
+           <a class="link-footer" href="http://www.acm.org">ACM</a>
+          </div>
+        </div>
+        <div class="row-fluid" style="background-color:#EEEEEE;color: #333333;">
+         <div class="span3 offset1" style="margin-top:1.5em;">
+          <span id="copyright">&copy; Capitulo ACM - Universidad de los Andes</span>
+          </div>
+          <div class="span2 offset5" style="margin-top:1em;margin-bottom:1em;">
+            <a href="https://facebook.com/ACMUniandes"><img src="./images/facebook2.png"></a> &nbsp;&nbsp;&nbsp;
+            <a href="https://twitter.com/ACMUniandes"><img src="./images/twitter2.png"></a> &nbsp;&nbsp;&nbsp;
+            <a href="https://plus.google.com/u/0/106882729180584555937/"><img src="./images/google-plus.png"></a>
+          </div>
+         </div>
+      </div>
+    </div>
 
     
 
