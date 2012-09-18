@@ -90,7 +90,7 @@
              <a href="#post">Not enough?</a>
           </div>
         </div>
-        <div class="row-fluid">
+        <div class="row-fluid" style="height:25%;">
            <div class="span6">
             <h3> Hello World </h3>
             <p> Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit 
