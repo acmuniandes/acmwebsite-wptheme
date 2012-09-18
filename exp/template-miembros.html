@@ -18,6 +18,7 @@
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 
+
 	</head>
 
 	<body>
@@ -70,24 +71,14 @@
 			</div>
 			<!--Grid like images-->
 			<div class="row-fluid">
-				<div class="span2">
-					<a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="" /></a>
+				<div id="photo" class="span2">
+					<a id="photoPicture" href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="" /></a>
+					<div id="photoContent" style="display:none;padding:4px;">
+						<h4>JALopezSilva</h4>
+						<p>Bla bla bla bla bla bla Bla bla bla bla bla bla Bla bla bla bla bla bla</p>
+						<a href="jalopezsilva@gmail.com">jalopezsilva@gmail.com</a>
+					</div>
 				</div>
-				<div class="span2">
-					<a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="" /></a>
-				</div>
-				<div class="span2">
-					<a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="" /></a>
-				</div>
-				<div class="span2">
-					<a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="" /></a>
-				</div>
-				<div class="span2">
-					<a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="" /></a>
-				</div>
-			</div>
-			<br />
-			<div class="row-fluid">
 				<div class="span2">
 					<a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="" /></a>
 				</div>
@@ -121,22 +112,49 @@
 				<div class="span2">
 					<a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="" /></a>
 				</div>
+				<div class="span2">
+					<a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="" /></a>
+				</div>
 			</div>
+			<br />
+			<div class="row-fluid">
+				<div class="span2">
+					<a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="" /></a>
+				</div>
+				<div class="span2">
+					<a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="" /></a>
+				</div>
+				<div class="span2">
+					<a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="" /></a>
+				</div>
+				<div class="span2">
+					<a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="" /></a>
+				</div>
+				<div class="span2">
+					<a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="" /></a>
+				</div>
+				<div class="span2">
+					<a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="" /></a>
+				</div>
+					
+				
+			</div>
+			<br /><br />
 		</div>
 
 		<div id="footer-content" class="container">
 			<div id="footer">
 				<div id="footer-links" class="row-fluid">
-					<div class="span3">
+					<div class="span2">
 						<a href="http://www.uniandes.edu.co">Universidad de los Andes</a>
 					</div>
-					<div class="span3">
+					<div class="span2">
 						<a href="http://sistemas.uniandes.edu.co">Departamento ISIS</a>
 					</div>
-					<div class="span3">
+					<div class="span2">
 						<a href="http://acm.uniandes.edu.co/foros">Foros</a>
 					</div>
-					<div class="span3">
+					<div class="span2">
 						<a  href="http://www.acm.org">ACM</a>
 					</div>
 				</div>
@@ -154,8 +172,28 @@
 		<!-- Le javascript
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
-		<script src="http://code.jquery.com/jquery-1.8.1.js"></script>
-		<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.8.1.js" type="text/javascript"></script>
+		<script src="./lib/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+		<script>
 
+		$(function(){
+			$('#photo').hover(
+				function(){
+				$('#photoPicture').css('display','none');
+				$('#photoContent').css('display','block');
+			},
+				function(){
+				$('#photoPicture').css('display','block');
+				$('#photoContent').css('display','none');
+				$('#photoContent').css('position','absolute');
+				$('#photoContent').css('width','12.042%');
+				$('#photoContent').css('height','19.37%');
+
+
+			});
+
+			
+		});
+		</script>
 	</body>
 </html>

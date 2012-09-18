@@ -2,57 +2,17 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>ACM Uniandes</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
     <!-- Le styles -->
-    <link href="./lib/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href="./lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
-    <style>
-		body{
-	    	padding-bottom:40px;
-	    }
-	
-	    p{
-	    	text-align:justify;
-	    }
-	
-	    .link-footer{
-		    margin-top:1em;
-		    margin-bottom:1em;
-		    color: rgba(255, 255, 255, 0.5);
-	    }
-	
-	    .link-footer:hover{
-		    color: #FFFFFF;
-		    text-shadow: 0 0 10px rgba(255,255,255,0.25);
-	    }
-
-	    h2{
-	    	text-align:center;
-	    }
-
-	    #author{
-	    	text-align:left;
-	    }
-    </style>
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-    
-  </head>
+    <link href="./lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="./lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />	    
+    </head>
 
   <body> 
 
@@ -85,41 +45,51 @@
     </div>
     
     <!--Page header-->
-	<div class="container" style="width:100%;">
+   <div id="main-content" class="container"> 
 		<div class="row-fluid">
-			<div class="span10 offset1">
+			<div class="span12">
 				<div class="page-header">
 					<h1> Búsqueda <small> Capitulo ACM - Universidad de los Andes </small></h1>
 				</div>
 			</div>
 		</div>
 		<!--Singlepost-->
-		<div class="row-fluid" style="height:70%">
-			<div class="span10 offset1">
+		<div class="row-fluid posts results">
+			<div class="span12">
 				<!--Comment Section-->
-				<div id="comments">
+				<div class="results">
 					<h3> Resultados </h3>
 					<div class="well well-large">
-						<div id="singlecomment" style="border-bottom: 1px solid #EEEEEE; overflow:hidden;">
-							<span style="float:left"> <i class="icon-user" style="left:0;"></i> JALopezSilva </span>
-							<span style="float:right;"> <i class="icon-calendar" style="right:0;"></i> 09/15/2012 </span>
-							<p style="clear:both;padding:1em;">
+						<div class="singleresult" 
+							<span class="pull-left"> <i class="icon-user"></i> JALopezSilva </span>
+							<span class="pull-right"> <i class="icon-calendar"></i> 09/15/2012 </span>
+							<p>
 								Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
 								Etiam porta sem malesuada magna mollis euismod.
 							</p>
-							<a href="#post" style="float:right;">Not enough?</a>
+							<a href="#post" class="pull-right">Not enough?</a>
 						</div>
 					</div>
-
 					<div class="well well-large">
-						<div id="singlecomment" style="border-bottom: 1px solid #EEEEEE; overflow:hidden;">
-							<span style="float:left"> <i class="icon-user" style="left:0;"></i> JALopezSilva </span>
-							<span style="float:right;"> <i class="icon-calendar" style="right:0;"></i> 09/15/2012 </span>
-							<p style="clear:both;padding:1em;">
+						<div class="singleresult" 
+							<span class="pull-left"> <i class="icon-user"></i> JALopezSilva </span>
+							<span class="pull-right"> <i class="icon-calendar"></i> 09/15/2012 </span>
+							<p>
 								Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
 								Etiam porta sem malesuada magna mollis euismod.
 							</p>
-							<a href="#post" style="float:right;">Not enough?</a>
+							<a href="#post" class="pull-right">Not enough?</a>
+						</div>
+					</div>
+					<div class="well well-large">
+						<div class="singleresult" 
+							<span class="pull-left"> <i class="icon-user"></i> JALopezSilva </span>
+							<span class="pull-right"> <i class="icon-calendar"></i> 09/15/2012 </span>
+							<p>
+								Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+								Etiam porta sem malesuada magna mollis euismod.
+							</p>
+							<a href="#post" class="pull-right">Not enough?</a>
 						</div>
 					</div>
 					<br />
@@ -129,34 +99,32 @@
 		</div>
 	</div>
     
-	<div class="container" style="width:100%;">
-      <div id="footer" style="margin-top:5em;text-align: center;">
-        <div class="row-fluid" style="background-color:#252525;padding:0.8em 0 0.4em">
-          <div class="span2 offset2">
-           <a class="link-footer" href="http://www.uniandes.edu.co">Universidad de los Andes</a>
-          </div>
-          <div class="span2">
-           <a class="link-footer" href="http://sistemas.uniandes.edu.co">Departamento ISIS</a>
-          </div>
-          <div class="span2">
-           <a class="link-footer" href="http://acm.uniandes.edu.co/foros">Foros</a>
-          </div>
-          <div class="span2">
-           <a class="link-footer" href="http://www.acm.org">ACM</a>
-          </div>
-        </div>
-        <div class="row-fluid" style="background-color:#EEEEEE;color: #333333;">
-         <div class="span3 offset1" style="margin-top:1.5em;">
-          <span id="copyright">&copy; Capitulo ACM - Universidad de los Andes</span>
-          </div>
-          <div class="span2 offset5" style="margin-top:1em;margin-bottom:1em;">
-            <a href="https://facebook.com/ACMUniandes"><img src="./images/facebook2.png"></a> &nbsp;&nbsp;&nbsp;
-            <a href="https://twitter.com/ACMUniandes"><img src="./images/twitter2.png"></a> &nbsp;&nbsp;&nbsp;
-            <a href="https://plus.google.com/u/0/106882729180584555937/"><img src="./images/google-plus.png"></a>
-          </div>
-         </div>
-      </div>
-    </div>
+	<div id="footer-content" class="container">
+		<div id="footer">
+			<div id="footer-links" class="row-fluid">
+				<div class="span3">
+					<a href="http://www.uniandes.edu.co">Universidad de los Andes</a>
+				</div>
+				<div class="span3">
+					<a href="http://sistemas.uniandes.edu.co">Departamento ISIS</a>
+				</div>
+				<div class="span3">
+					<a href="http://acm.uniandes.edu.co/foros">Foros</a>
+				</div>
+				<div class="span3">
+					<a  href="http://www.acm.org">ACM</a>
+				</div>
+			</div>
+			<div id="footer-icons" class="row-fluid">
+				<div id="copyright" class="span4">
+					<span>&copy; Capitulo ACM - Universidad de los Andes</span>
+				</div>
+				<div id="footer-icons-inner" class="span2 offset5">
+					<a href="https://facebook.com/ACMUniandes"><img src="./images/facebook2.png"></a> &nbsp;&nbsp;&nbsp; <a href="https://twitter.com/ACMUniandes"><img src="./images/twitter2.png"></a> &nbsp;&nbsp;&nbsp; <a href="https://plus.google.com/u/0/106882729180584555937/"><img src="./images/google-plus.png"></a>
+				</div>
+			</div>
+		</div>
+	</div>
     
     
     

@@ -34,6 +34,9 @@ p {
 	height: 70%;
 }
 
+.posts.results{
+	height:70%;
+}
 .posts.projects h2 {
 	text-align: center;
 }
@@ -46,14 +49,13 @@ p {
 .posts.about h2 {
 	margin-top: 0px;
 }
+.post.results h2{
+text-align:center;
 
+}
 .pagination {
 	text-align: center;
 	padding-top: 2em;
-}
-
-.results {
-	border-top: 1px solid #EEEEEE;
 }
 
 .singleresult {
