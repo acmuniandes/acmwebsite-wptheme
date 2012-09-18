@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-		<span name="outer"></span><div name="outer" class="outer">
+		<span></span><div name="outer" class="outer">
       		<span></span><header id="herodiv" class="hero-unit inner">
         		<h1>Welcome to ACM Uniandes!</h1>
         		<div id="description">
