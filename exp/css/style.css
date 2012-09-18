@@ -4,14 +4,29 @@ body{
 p{
   text-align:justify;
 }
-#posts{
-  height:100%;
-}
-#posts a{
+.posts a{
   float:right;
 }
-#posts-upper{
+.posts.news{
+ height:100%; 
+}
+.posts.projects{
+ height:70%;
+}
+.posts.projects h2{
+ text-align:center;
+}
+
+.projects img{
+ margin-right:auto;
+ margin-left:auto;
+ display:block;
+}
+#news-upper{
   height:50%;
+}
+#news-lower{
+height:25%;
 }
 
 #footer-links a{
@@ -55,5 +70,3 @@ p{
   margin-top:1em;
   margin-bottom:1em;
 }
-
-
