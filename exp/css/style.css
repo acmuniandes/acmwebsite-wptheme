@@ -13,15 +13,48 @@ p{
 .posts.projects{
  height:70%;
 }
+
+.posts.single{
+height:70%;
+}
+
 .posts.projects h2{
  text-align:center;
 }
-
 .projects img{
  margin-right:auto;
  margin-left:auto;
  display:block;
 }
+
+
+
+.posts.about h2{
+ margin-top:0px;
+}
+
+.pagination{
+  text-align:center;
+  padding-top:2em;
+}
+
+.results{
+ border-top: 1px solid #EEEEEE;
+}
+
+.singleresult{
+border-bottom: 1px solid #EEEEEE;
+}
+
+.singleresult p{
+clear:both;
+padding:1em;
+}
+
+#author{
+text-align:left;
+}
+
 #news-upper{
   height:50%;
 }
@@ -44,10 +77,6 @@ height:25%;
   width:82.90598%
 }
 
-.pagination{
-  text-align:center;
-  padding-top:2em;
-}
 #footer-content{
   width:100%;
 }
@@ -69,4 +98,114 @@ height:25%;
 #footer-icons-inner{
   margin-top:1em;
   margin-bottom:1em;
+}
+
+
+
+/* Single post media query */
+
+
+@media all and (max-width: 850px)
+{
+	.single.img{
+		width:100%;
+		margin-bottom:2em;
+		
+	}
+
+}
+
+
+@media all and (min-width: 851px)
+{
+	.single.img{
+		float:right;
+		width:50%;
+		padding:2em;
+		
+	}
+
+}
+
+
+/* About us */
+
+ @media all and (max-width: 700px) {
+	 	.affix{
+		position:static;
+		}
+
+		.bs-docs-sidenav{
+	         background-color: #FFFFFF;
+	    	 border-radius: 6px 6px 6px 6px;
+	    	 box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+	    	 width: 100%;
+		 margin-bottom:2em;	
+		}
+
+		.bs-docs-sidenav.affix {
+    		top: 20px;
+		width:100%
+		}
+		
+      }
+
+ @media all and (min-width: 701px) {
+
+
+		.bs-docs-sidenav.affix {
+    		top: 20px;
+    width:19.120135%;
+		}
+		
+      }
+
+.bs-docs-sidenav {
+    background-color: #FFFFFF;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+    padding: 0;
+    width: 100%;
+}
+.bs-docs-sidenav > li > a {
+    border: 1px solid #E5E5E5;
+    display: block;
+    margin: 0 0 -1px;
+    padding: 8px 14px;
+}
+.bs-docs-sidenav > li:first-child > a {
+    border-radius: 6px 6px 0 0;
+}
+.bs-docs-sidenav > li:last-child > a {
+    border-radius: 0 0 6px 6px;
+}
+.bs-docs-sidenav > .active > a {
+    border: 0 none;
+    box-shadow: 1px 0 0 rgba(0, 0, 0, 0.1) inset, -1px 0 0 rgba(0, 0, 0, 0.1) inset;
+    padding: 9px 15px;
+    position: relative;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+.bs-docs-sidenav .icon-chevron-right {
+    float: right;
+    margin-right: -6px;
+    margin-top: 2px;
+    opacity: 0.25;
+}
+.bs-docs-sidenav > li > a:hover {
+    background-color: #F5F5F5;
+}
+.bs-docs-sidenav a:hover .icon-chevron-right {
+    opacity: 0.5;
+}
+.bs-docs-sidenav .active .icon-chevron-right, .bs-docs-sidenav .active a:hover .icon-chevron-right {
+    background-image: url("../img/glyphicons-halflings-white.png");
+    opacity: 1;
+}
+
+.bs-docs-sidenav.affix-bottom {
+    bottom: 270px;
+    position: absolute;
+    top: auto;
 }
