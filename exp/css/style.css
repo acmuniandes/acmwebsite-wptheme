@@ -1,0 +1,59 @@
+body{
+  padding-bottom:40px;
+}
+p{
+  text-align:justify;
+}
+#posts{
+  height:100%;
+}
+#posts a{
+  float:right;
+}
+#posts-upper{
+  height:50%;
+}
+
+#footer-links a{
+  color:rgba(255,255,255,0.5);
+} 
+
+#footer-links a:hover{
+  color:#FFFFFF;
+  text-shadow:0 0 10px rgba(255,255,255,0.25);
+}
+
+#main-content{
+  margin-left:8.54701%;
+  margin-right:8.54701%;
+  width:82.90598%
+}
+
+.pagination{
+  text-align:center;
+  padding-top:2em;
+}
+#footer-content{
+  width:100%;
+}
+#footer{
+  margin-top:5em;
+  text-align:center;
+}
+#footer-links{
+  background-color:#252525 ;
+  padding:0.8em 0 0.4em 0;
+}
+#footer-icons{
+  background-color:#EEEEEE;
+  color;#333333;
+}
+#copyright{
+  margin-top:1.5em;
+}
+#footer-icons-inner{
+  margin-top:1em;
+  margin-bottom:1em;
+}
+
+
