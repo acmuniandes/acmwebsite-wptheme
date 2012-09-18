@@ -1,16 +1,219 @@
-/*  
-Theme Name: Bootstrapped
-Theme URI: http://example.com/example/
-Description: A search engine optimized website framework for WordPress.
-Author: You
-Author URI: http://example.com/
+/*
+Theme Name: ACM Website Theme
+Theme URI: http://acm.uniandes.edu.co
+Description: Theme for the ACM Chapter Website - Universidad de los Andes
+Author: acmchapter
+Author URI: http://acm.uniandes.edu.co
 Version: 1.0
-Tags: Comma-separated tags that describe your theme
-.
-Your theme can be your copyrighted work.
-Like WordPress, this work is released under GNU General Public License, version 2 (GPL).
- 
-http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- 
-.
+Tags: epic
+
+License: 
+License URI:
+
+General comments (optional).
 */
+
+
+body {
+	padding-bottom: 40px;
+}
+p {
+	text-align: justify;
+}
+.posts a {
+	float: right;
+}
+.posts.news {
+	height: 100%;
+}
+.posts.projects {
+	height: 70%;
+}
+
+.posts.single {
+	height: 70%;
+}
+
+.posts.projects h2 {
+	text-align: center;
+}
+.projects img {
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+}
+
+.posts.about h2 {
+	margin-top: 0px;
+}
+
+.pagination {
+	text-align: center;
+	padding-top: 2em;
+}
+
+.results {
+	border-top: 1px solid #EEEEEE;
+}
+
+.singleresult {
+	border-bottom: 1px solid #EEEEEE;
+}
+
+.singleresult p {
+	clear: both;
+	padding: 1em;
+}
+
+.thumbnail:hover {
+	opacity: 0;
+}
+
+#author {
+	text-align: left;
+}
+
+#news-upper {
+	height: 50%;
+}
+#news-lower {
+	height: 25%;
+}
+
+#footer-links a {
+	color: rgba(255,255,255,0.5);
+}
+
+#footer-links a:hover {
+	color: #FFFFFF;
+	text-shadow: 0 0 10px rgba(255,255,255,0.25);
+}
+
+#main-content {
+	margin-left: 8.54701%;
+	margin-right: 8.54701%;
+	width: 82.90598%
+}
+
+#footer-content {
+	width: 100%;
+}
+#footer {
+	margin-top: 5em;
+	text-align: center;
+}
+#footer-links {
+	background-color: #252525;
+	padding: 0.8em 0 0.4em 0;
+}
+#footer-icons {
+	background-color: #EEEEEE;
+	color: #333333;
+}
+#copyright {
+	margin-top: 1.5em;
+}
+#footer-icons-inner {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+/* Single post media query */
+
+@media all and (max-width: 850px) {
+	.single.img {
+		width: 100%;
+		margin-bottom: 2em;
+	}
+
+}
+
+@media all and (min-width: 851px) {
+	.single.img {
+		float: right;
+		width: 50%;
+		padding: 2em;
+	}
+
+}
+
+/* About us */
+
+@media all and (max-width: 700px) {
+	.affix {
+		position: static;
+	}
+
+	.bs-docs-sidenav {
+		background-color: #FFFFFF;
+		border-radius: 6px 6px 6px 6px;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+		width: 100%;
+		margin-bottom: 2em;
+	}
+
+	.bs-docs-sidenav.affix {
+		top: 20px;
+		width: 100%
+	}
+
+}
+
+@media all and (min-width: 701px) {
+
+	.bs-docs-sidenav.affix {
+		top: 20px;
+		width: 19.120135%;
+	}
+
+}
+
+.bs-docs-sidenav {
+	background-color: #FFFFFF;
+	border-radius: 6px 6px 6px 6px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+	padding: 0;
+	width: 100%;
+}
+.bs-docs-sidenav > li > a {
+	border: 1px solid #E5E5E5;
+	display: block;
+	margin: 0 0 -1px;
+	padding: 8px 14px;
+}
+.bs-docs-sidenav > li:first-child > a {
+	border-radius: 6px 6px 0 0;
+}
+.bs-docs-sidenav > li:last-child > a {
+	border-radius: 0 0 6px 6px;
+}
+.bs-docs-sidenav > .active > a {
+	border: 0 none;
+	box-shadow: 1px 0 0 rgba(0, 0, 0, 0.1) inset, -1px 0 0 rgba(0, 0, 0, 0.1) inset;
+	padding: 9px 15px;
+	position: relative;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+	z-index: 2;
+}
+.bs-docs-sidenav .icon-chevron-right {
+	float: right;
+	margin-right: -6px;
+	margin-top: 2px;
+	opacity: 0.25;
+}
+.bs-docs-sidenav > li > a:hover {
+	background-color: #F5F5F5;
+}
+.bs-docs-sidenav a:hover .icon-chevron-right {
+	opacity: 0.5;
+}
+.bs-docs-sidenav .active .icon-chevron-right, .bs-docs-sidenav .active a:hover .icon-chevron-right {
+	background-image: url("../img/glyphicons-halflings-white.png");
+	opacity: 1;
+}
+
+.bs-docs-sidenav.affix-bottom {
+	bottom: 270px;
+	position: absolute;
+	top: auto;
+}
