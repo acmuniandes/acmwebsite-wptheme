@@ -24,8 +24,8 @@
 	
 		?></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="" />
-		<meta name="author" content="" />
+		<meta name="description" content="<?php bloginfo('description') ?>" />
+		<meta name="author" content="<?php bloginfo('admin_email'); ?>" />
 
 		<!-- Le styles -->
 		<link href="<?php bloginfo('template_url')?>/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -49,27 +49,9 @@
 					<!--<a class="brand" href="#">ACM Uniandes</a>-->
 					<div class="nav-collapse collapse">
 						<ul class="nav">
-							<li class="active">
-								<a href="#">Inicio</a>
-							</li>
-							<li>
-								<a href="#about">Nosotros</a>
-							</li>
-							<li>
-								<a id="noticias" href="#about">Noticias</a>
-							</li>
-							<li>
-								<a href="#contact">Proyectos</a>
-							</li>
-							<li>
-								<a href="#contact">Actividades</a>
-							</li>
-							<li>
-								<a href="#contact">Miembros</a>
-							</li>
-							<li>
-								<a href="#contact">Contacto</a>
-							</li>
+							<!--TODO Home, Inicio-->
+							<?php wp_list_categories('title_li=&hide_empty=0&exclude=1&orderby=id'); ?>
+							<?php wp_list_pages('title_li=&sort_column=ID'); ?>
 						</ul>
 						<form class="navbar-search pull-right">
 							<input type="text" class="search-query" placeholder="Looking for something?" />
