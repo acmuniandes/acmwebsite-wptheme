@@ -17,7 +17,7 @@
 					</div>
 					<div id="footer-icons" class="row-fluid">
 						<div id="copyright" class="span4">
-							<span>&copy; Capitulo ACM - Universidad de los Andes</span>
+							<span>&copy; <?php bloginfo('name'); ?> </span>
 						</div>
 						<div id="footer-icons-inner" class="span2 offset5">
 							<a href="https://facebook.com/ACMUniandes"><img src="<?php bloginfo('template_url')?>/images/facebook2.png"></a> &nbsp;&nbsp;&nbsp; <a href="https://twitter.com/ACMUniandes"><img src="<?php bloginfo('template_url')?>/images/twitter2.png"></a> &nbsp;&nbsp;&nbsp; <a href="https://plus.google.com/u/0/106882729180584555937/"><img src="<?php bloginfo('template_url')?>/images/google-plus.png"></a>

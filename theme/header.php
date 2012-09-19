@@ -2,13 +2,14 @@
 <html <?php language_attributes(); ?>>
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
-		<title><?php wp_title(); ?></title>
+		<title><?php bloginfo('name'); ?><?php wp_title(); ?></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="<?php bloginfo('description') ?>" />
 		<meta name="author" content="<?php bloginfo('admin_email'); ?>" />
 
 		<!-- Le styles -->
 		<link href="<?php bloginfo('template_url')?>/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+		<link href="<?php bloginfo('template_url')?>/css/common.css" rel="stylesheet" type="text/css"/>
 		<link href="<?php bloginfo('template_url')?>/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
 		<?php if(is_front_page()){ ?>
 			<link href="<?php bloginfo('template_url')?>/css/home.css" rel="stylesheet" type="text/css"/>
@@ -26,17 +27,10 @@
 				<div class="container">
 					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
 					<a class="brand" href="#"><img src="<?php bloginfo('template_url')?>/images/logo.png"></a>
-					<!--<a class="brand" href="#">ACM Uniandes</a>-->
+						<!--<a class="brand" href="#">ACM Uniandes</a>-->
 					<div class="nav-collapse collapse">
-						<ul class="nav">
-							<!--TODO Home, Inicio-->
-							<?php wp_list_categories('title_li=&hide_empty=0&exclude=1&orderby=id'); ?>
-							<?php wp_list_pages('title_li=&sort_column=ID'); ?>
-						</ul>
-						<form class="navbar-search pull-right">
-							<input type="text" class="search-query" placeholder="Looking for something?" />
-						</form>
-					</div><!--/.nav-collapse -->
+						<?php wp_nav_menu(array('container'=> '','theme_location'=>'nav-menu','menu_class'=>'nav' ) ); ?>
+					</div>
 				</div>
 			</div>
 		</div>
