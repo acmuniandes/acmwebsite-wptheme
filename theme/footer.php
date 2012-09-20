@@ -7,8 +7,8 @@
 						$size = sizeof($bookmarks);
 						$each = floor(12/$size);
 						for($i = 0; $i < 12 && $i < $size;$i++){
-						$bm = $bookmarks[$i];		
-						echo '<div class="span'.$each.'"><a href="'.$bm->link_url.'">'._($bm->link_name).'</a></div>';
+							$bm = $bookmarks[$i];		
+							echo '<div class="span'.$each.'"><a href="'.$bm->link_url.'">'._($bm->link_name).'</a></div>';
 						}
 
 						?>
@@ -22,7 +22,7 @@
 						</div>
 					</div>
 				</div>
-			<?php } ?>
+		<?php } ?>
 		<!-- Le javascript
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->

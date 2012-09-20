@@ -29,13 +29,14 @@ function modify_query($query)
 	if($query->is_main_query())
 	{
 		//For news
-		if(is_category('news'))
-		{
-			 $query->set('posts_per_page','3');
+		if(is_category('news')){
+			$query->set('posts_per_page','5');
 		//For activities	 
-		}else if(is_category('activities'))
-		{
-			 $query->set('posts_per_page','2');
+		} else if(is_category('activities') || is_category('projects')){
+			$query->set('posts_per_page','2');
+
+		} else if(is_category('members')){
+			$query->set('posts_per_page','15');
 
 		}
 	}
