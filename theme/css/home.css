@@ -20,7 +20,7 @@ span {
 
 @media all and (max-width: 1280px) and (min-width: 904px) {
 	#herodiv {
-		background: url(./images/acmcover.png) no-repeat;
+		background: url(./img/acmcover.png) no-repeat;
 		height: 200px;
 	}
 
@@ -33,7 +33,7 @@ span {
 
 @media all and (max-width: 1430px) and (min-width: 1281px) {
 	#herodiv {
-		background: url(../images/acmcover3.png) no-repeat;
+		background: url(../img/acmcover3.png) no-repeat;
 		height: 200px;
 	}
 	#description {
@@ -45,7 +45,7 @@ span {
 
 @media all and (max-width: 1600px) and (min-width: 1431px) {
 	#herodiv {
-		background: url(../images/acmcover4.png) no-repeat;
+		background: url(../img/acmcover4.png) no-repeat;
 		height: 250px;
 	}
 	#description {
@@ -57,7 +57,7 @@ span {
 
 @media all and (max-width: 1920px) and (min-width: 1601px) {
 	#herodiv {
-		background: url(../images/acmcover2.png) no-repeat;
+		background: url(../img/acmcover2.png) no-repeat;
 		height: 300px;
 	}
 	#description {

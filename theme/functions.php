@@ -42,6 +42,19 @@ function modify_query($query)
 	}
 }
 
+/*
+ * Registers and enqueues scripts to be used on the wptheme.
+ */
+
+function loadjs()
+{	
+	wp_enqueue_script('bootstrap',get_template_directory_uri().'/js/bootstrap.min.js',array('jquery'),'', true);	
+	wp_enqueue_script('jquery','/wp-includes/js/jquery/jquery.js','','',true);
+
+}
+
+
 add_action('init','acmtheme_setup');
 add_action('pre_get_posts', 'modify_query');
+add_action( 'wp_enqueue_scripts', 'loadjs'); 
 ?>
