@@ -2,30 +2,26 @@
 			<div id="footer-content" class="container">
 				<div id="footer">
 					<div id="footer-links" class="row-fluid">
-						<div class="span3">
-							<a href="http://www.uniandes.edu.co">Universidad de los Andes</a>
-						</div>
-						<div class="span3">
-							<a href="http://sistemas.uniandes.edu.co">Departamento ISIS</a>
-						</div>
-						<div class="span3">
-							<a href="http://acm.uniandes.edu.co/foros">Foros</a>
-						</div>
-						<div class="span3">
-							<a  href="http://www.acm.org">ACM</a>
-						</div>
+						<?php 
+						$bookmarks = get_bookmarks(array('category_name'=>'External','orderby'=>'link_id'));
+						$size = sizeof($bookmarks);
+						$each = floor(12/$size);
+						for($i = 0; $i < 12 && $i < $size;$i++){
+						$bm = $bookmarks[$i];		
+						echo '<div class="span'.$each.'"><a href="'.$bm->link_url.'">'._($bm->link_name).'</a></div>';
+						}
+
+						?>
 					</div>
 					<div id="footer-icons" class="row-fluid">
 						<div id="copyright" class="span4">
 							<span>&copy; <?php bloginfo('name'); ?> </span>
 						</div>
 						<div id="footer-icons-inner" class="span2 offset5">
-							<a href="https://facebook.com/ACMUniandes"><img src="<?php bloginfo('template_url')?>/images/facebook2.png"></a> &nbsp;&nbsp;&nbsp; <a href="https://twitter.com/ACMUniandes"><img src="<?php bloginfo('template_url')?>/images/twitter2.png"></a> &nbsp;&nbsp;&nbsp; <a href="https://plus.google.com/u/0/106882729180584555937/"><img src="<?php bloginfo('template_url')?>/images/google-plus.png"></a>
+							<a href="<?php $arr = get_bookmarks(array('category_name'=>'Social','search'=>'Facebook')); echo $arr[0]->link_url; ?>"><img src="<?php bloginfo('template_url')?>/images/facebook2.png"></a> &nbsp;&nbsp;&nbsp; <a href="<?php $arr = get_bookmarks(array('category_name'=>'Social','search'=>'Twitter')); echo $arr[0]->link_url; ?>"><img src="<?php bloginfo('template_url')?>/images/twitter2.png"></a> &nbsp;&nbsp;&nbsp; <a href="<?php $arr = get_bookmarks(array('category_name'=>'Social','search'=>'Google Plus')); echo $arr[0]->link_url; ?>"><img src="<?php bloginfo('template_url')?>/images/google-plus.png"></a>
 						</div>
 					</div>
 				</div>
-			</div>
-		<?php } ?>
 
 		<!-- Le javascript
 		================================================== -->
