@@ -6,8 +6,6 @@
  * Navigation bar
  */
 
-
-
 /**
  * Function to setup the main features of the theme.
  */
@@ -17,13 +15,13 @@ function acmtheme_setup()
 	 * Registers the main navegation menu.
 	 */
 	register_nav_menus(
-		array('nav-menu' => _('Navegation Menu'))
+			array('nav-menu' => _('Navegation Menu'))
 	);
 }
 
 /*
  * Modifies the main query for each specific template.
- */
+*/
 function modify_query($query)
 {
 	if($query->is_main_query())
@@ -31,7 +29,7 @@ function modify_query($query)
 		//For news
 		if(is_category('news')){
 			$query->set('posts_per_page','5');
-		//For activities	 
+			//For activities
 		} else if(is_category('activities') || is_category('projects')){
 			$query->set('posts_per_page','2');
 
@@ -42,19 +40,45 @@ function modify_query($query)
 	}
 }
 
+/**
+ *  Function that limits the number of characters appearing in a post's content.
+ */
+function the_content_limit($max_char, $more_link_text = '_(Read more…)', $stripteaser = 0, $more_file = "") {
+
+	$content = get_the_content($more_link_text, $stripteaser, $more_file);
+	$content = str_replace(']]>', ']]>', $content);
+	$content = apply_filters('the_content', $content);
+	$content = strip_tags($content);
+
+	if (strlen($_GET['p']) > 0) {
+
+		echo $content;
+	}
+	else if ((strlen($content)>$max_char) && ($espacio = strpos($content, " ", $max_char ))) {
+		$content = substr($content, 0, $espacio);
+		$content = $content;
+		echo $content;
+		echo "…";
+		echo " ".$more_link_text." ";
+	}
+	else {
+		echo $content;
+	}
+
+}
+
 /*
  * Registers and enqueues scripts to be used on the wptheme.
- */
+*/
 
 function loadjs()
-{	
-	wp_enqueue_script('bootstrap',get_template_directory_uri().'/js/bootstrap.min.js',array('jquery'),'', true);	
+{
+	wp_enqueue_script('bootstrap',get_template_directory_uri().'/js/bootstrap.min.js',array('jquery'),'', true);
 	wp_enqueue_script('jquery','/wp-includes/js/jquery/jquery.js','','',true);
-
 }
 
 
 add_action('init','acmtheme_setup');
 add_action('pre_get_posts', 'modify_query');
-add_action( 'wp_enqueue_scripts', 'loadjs'); 
+add_action( 'wp_enqueue_scripts', 'loadjs');
 ?>
