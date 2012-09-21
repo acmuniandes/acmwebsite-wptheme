@@ -20,7 +20,7 @@ span {
 
 @media all and (max-width: 1280px) and (min-width: 904px) {
 	#herodiv {
-		background: url(./img/acmcover.png) no-repeat;
+		background: url(../img/acmcover.png) no-repeat;
 		height: 200px;
 	}
 

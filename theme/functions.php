@@ -46,7 +46,7 @@ function modify_query($query)
 function the_content_limit($max_char, $more_link_text = '_(Read more…)', $stripteaser = 0, $more_file = "") {
 
 	$content = get_the_content($more_link_text, $stripteaser, $more_file);
-	$content = str_replace(']]>', ']]>', $content);
+	//$content = str_replace(']]>', ']]>', $content);
 	$content = apply_filters('the_content', $content);
 	$content = strip_tags($content);
 
