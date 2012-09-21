@@ -217,4 +217,15 @@ p {
 	position: absolute;
 	top: auto;
 }
-
+.post{
+	overflow: hidden;
+}
+.post-large{
+	height: 530px;
+}
+.post-med{
+	height: 230px;
+}
+.post-small{
+	height: 210px;
+}
