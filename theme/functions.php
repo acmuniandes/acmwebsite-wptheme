@@ -16,7 +16,8 @@ function acmtheme_setup()
 	 */
 	register_nav_menus(
 			array('nav-menu' => _('Navegation Menu'))
-	);
+		);
+
 }
 
 /*
