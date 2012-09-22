@@ -13,7 +13,7 @@
 	$numpost = 0; 
 	if ( have_posts() ) : while ( have_posts() ) : the_post(); $numpost++; ?>
 	
-	<?php  if($numpost==3 || $numposts==1) echo '<div class="span6">'; ?> 
+	<?php  if($numpost==3 || $numpost==1) echo '<div class="span6">'; ?> 
 	
 	<div id="post-<?php the_ID(); ?>" <?php post_class("row-fluid"); ?> >
 		<?php
@@ -45,37 +45,13 @@
 				<div class="span12">
 					<div class="pagination">
 						<ul>
-			<?php
-				global $wp_query;
-
-				$big = 999999999; // need an unlikely integer
-				$arr = paginate_links( array(
-					'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-					'format' => '?paged=%#%',
-					'current' => 0,
-					'total' => $wp_query->max_num_pages,
-					'prev_next' => true,
-					'prev_text' => __('«'),
-					'next_text' => __('»'),
-					'type' => 'array'
-				) );
-				
-				foreach ($arr as $value) {
-					echo '<li>'.$value.'</li>';
-				}
-			?>
+							<?php list_pagination_links(); ?>
 						</ul>
 					</div>
 				</div>
 			</div>
 			
 	</div><!--main content-->
-
-	
-<!-- 	<div class="navigation">
-	 	<div class="alignleft"><?php previous_posts_link('&laquo; Previous Entries') ?></div>
-	 	<div class="alignright"><?php next_posts_link('Next Entries &raquo;','') ?></div>
- 	</div> -->
 		
 	<?php else:?>
 	<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
