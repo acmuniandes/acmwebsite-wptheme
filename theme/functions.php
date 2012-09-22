@@ -49,21 +49,21 @@ function the_content_limit($max_char, $more_link_text = '_(Read more…)', $stri
 	$content = get_the_content($more_link_text, $stripteaser, $more_file);
 	//$content = str_replace(']]>', ']]>', $content);
 	$content = apply_filters('the_content', $content);
-	$content = strip_tags($content);
+	// $content = strip_tags($content);
 
 	if (strlen($_GET['p']) > 0) {
 
-		echo $content;
+		echo force_balance_tags($content);
 	}
 	else if ((strlen($content)>$max_char) && ($espacio = strpos($content, " ", $max_char ))) {
 		$content = substr($content, 0, $espacio);
 		$content = $content;
-		echo $content;
+		echo force_balance_tags($content);
 		echo "…";
 		echo " ".$more_link_text." ";
 	}
 	else {
-		echo $content;
+		echo force_balance_tags($content);
 	}
 
 }
@@ -159,6 +159,7 @@ function list_pagination_links(){
 		echo '<li>'.get_next_posts_link(__('»')).'</li>';
 	}
 }
+
 
 add_action('init','acmtheme_setup');
 add_action('pre_get_posts', 'modify_query');
