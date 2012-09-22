@@ -133,7 +133,7 @@ function loadjs()
 	wp_enqueue_script('jquery','/wp-includes/js/jquery/jquery.js','','',true);
 }
 
-
+add_theme_support('post-thumbnails');
 add_action('init','acmtheme_setup');
 add_action('pre_get_posts', 'modify_query');
 add_action( 'wp_enqueue_scripts', 'loadjs');
