@@ -13,7 +13,7 @@
 	$numpost = 0; 
 	if ( have_posts() ) : while ( have_posts() ) : the_post(); $numpost++; ?>
 	
-	<?php  if($numpost==3 || $numposts==1) echo '<div class="span6">'; ?> 
+	<?php  if($numpost==3 || $numpost==1) echo '<div class="span6">'; ?> 
 	
 	<div id="post-<?php the_ID(); ?>" <?php post_class("row-fluid"); ?> >
 		<?php
@@ -23,9 +23,14 @@
 		if($numpost>2 ) $heading = 4; 
 		the_title("<h$heading>", "</h$heading>");
 		?> 
-	
-		 <!-- Display the date (November 16th, 2009 format) and a link to other posts by this posts author.
-		 <small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></small> -->
+		
+		<?php
+		global $post;
+		$thumb= get_thumb_url($post->post_content);
+		$style = "height:150px;width:150px;";
+		if ($thumb!='') echo '<img style="'.$style.'" src="'.$thumb.'" alt="'. get_the_title().'" />';
+		?>	
+
 		  <p><?php
 		   $chars =  1400;
 		   if($numpost>2) $chars = 470; 
