@@ -37,7 +37,7 @@ p {
 .posts.projects h2 {
 	text-align: center;
 }
-.projects img {
+.projects img, .news img {
 	margin-right: auto;
 	margin-left: auto;
 	display: block;

@@ -24,19 +24,12 @@
 		the_title("<h$heading>", "</h$heading>");
 		?> 
 		
-		<?php
-		global $post;
-		$thumb= get_thumb_url($post->post_content);
-		$style = "height:150px;width:150px;";
-		if ($thumb!='') echo '<img style="'.$style.'" src="'.$thumb.'" alt="'. get_the_title().'" />';
-		?>	
-
-		  <p><?php
+		   <div><?php
 		   $chars =  1400;
 		   if($numpost>2) $chars = 470; 
-		   the_content_limit($chars, ""); ?></p>
+		   the_content_limit($chars, ""); ?></div>
 		
-		 <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">Keep on Reading </a>
+		<a href="<?php the_permalink() ?>" rel="bookmark" title="permanent link to <?php the_title_attribute(); ?>">Keep on Reading </a>
 	 </div> 
 	 
 	 <?php  if(($numpost == 2) || ($numpost == 5)) echo '</div>'; ?> 

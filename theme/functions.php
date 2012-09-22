@@ -49,7 +49,7 @@ function the_content_limit($max_char, $more_link_text = '_(Read more…)', $stri
 	$content = get_the_content($more_link_text, $stripteaser, $more_file);
 	//$content = str_replace(']]>', ']]>', $content);
 	$content = apply_filters('the_content', $content);
-	$content = strip_tags($content);
+	//$content = strip_tags($content);
 
 	if (strlen($_GET['p']) > 0) {
 
@@ -160,7 +160,6 @@ function list_pagination_links(){
 	}
 }
 
-add_theme_support('post-thumbnails');
 add_action('init','acmtheme_setup');
 add_action('pre_get_posts', 'modify_query');
 add_action( 'wp_enqueue_scripts', 'loadjs');
