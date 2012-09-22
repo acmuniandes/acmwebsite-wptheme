@@ -9,12 +9,11 @@
 			</div>
 			<div class="row-fluid posts news">
 				<div id="news-upper" class="row-fluid">
-					<div class="span6">	
 	<?php 
 	$numpost = 0; 
 	if ( have_posts() ) : while ( have_posts() ) : the_post(); $numpost++; ?>
 	
-	<?php  if($numpost==3) echo '<div class="span6">'; ?> 
+	<?php  if($numpost==3 || $numposts==1) echo '<div class="span6">'; ?> 
 	
 	<div id="post-<?php the_ID(); ?>" <?php post_class("row-fluid"); ?> >
 		<?php
