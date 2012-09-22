@@ -23,9 +23,14 @@
 		if($numpost>2 ) $heading = 4; 
 		the_title("<h$heading>", "</h$heading>");
 		?> 
-	
-		 <!-- Display the date (November 16th, 2009 format) and a link to other posts by this posts author.
-		 <small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></small> -->
+		
+		<?php
+		global $post;
+		$thumb= get_thumb_url($post->post_content);
+		$style = "height:150px;width:150px;";
+		if ($thumb!='') echo '<img style="'.$style.'" src="'.$thumb.'" alt="'. get_the_title().'" />';
+		?>	
+
 		  <p><?php
 		   $chars =  1400;
 		   if($numpost>2) $chars = 470; 
