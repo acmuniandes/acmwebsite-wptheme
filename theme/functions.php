@@ -67,14 +67,24 @@ function the_content_limit($max_char, $more_link_text = '_(Read more…)', $stri
 /*
  * Registers and enqueues scripts to be used on the wptheme.
  */
-function loadjs()
+function load_scripts_styles()
 {
 	wp_enqueue_script('bootstrap',get_template_directory_uri().'/js/bootstrap.min.js',array('jquery'),'', true);
 	wp_enqueue_script('jquery','/wp-includes/js/jquery/jquery.js','','',true);
+	
+	wp_enqueue_style('bootstrapcss',get_template_directory_uri().'/css/bootstrap.min.css');
+	wp_enqueue_style('responsivecss',get_template_directory_uri().'/css/bootstrap-responsive.min.css');
+	wp_enqueue_style('common',get_template_directory_uri().'/css/common.css');
+	
+	if(is_front_page()){
+		wp_enqueue_style('home',get_template_directory_uri().'/css/home.css');
+	} else {
+		wp_enqueue_style('style',get_template_directory_uri().'/style.css');
+	}
 }
 
 /*
- * 
+ * Lists the pagination links for pagination menu
  */
 function list_pagination_links(){
 	global $wp_query;
@@ -104,5 +114,5 @@ function list_pagination_links(){
 add_theme_support('post-thumbnails');
 add_action('init','acmtheme_setup');
 add_action('pre_get_posts', 'modify_query');
-add_action( 'wp_enqueue_scripts', 'loadjs');
+add_action('wp_enqueue_scripts', 'load_scripts_styles');
 ?>
