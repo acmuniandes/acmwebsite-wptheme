@@ -89,7 +89,6 @@ function load_scripts_styles()
 /**
  * Function to display each comment using the theme's defined style.
  */
-
 function display_custom_comment($comment){
 
 ?>
