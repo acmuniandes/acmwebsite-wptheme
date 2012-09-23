@@ -73,6 +73,8 @@ function load_scripts_styles()
 	wp_enqueue_script('jquery','/wp-includes/js/jquery/jquery.js','','',true);
 	if(is_page('about')){
 		wp_enqueue_script('page-about',get_template_directory_uri().'/js/page-about.js',array('jquery','bootstrap'),'',true);
+	}else if(is_single()){
+		wp_enqueue_script('single-post',get_template_directory_uri().'/js/single-post.js',array('jquery','bootstrap'),'',true);
 	}
 	
 	wp_enqueue_style('bootstrapcss',get_template_directory_uri().'/css/bootstrap.min.css');
@@ -90,19 +92,26 @@ function load_scripts_styles()
  * Function to display each comment using the theme's defined style.
  */
 
-function display_custom_comment($comment){
+function display_custom_comment($comment, $args, $depth){
+	$GLOBALS['comment'] = $comment;
 
 ?>
 	      <div <?php comment_class('well well-large'); ?> >
-			<div class="singleresult" >';
+			<div class="singleresult" >
 				<span class="pull-left"> <i class="icon-user"></i> <?php comment_author(); ?> </span>
-				<span class="pull-right"> <i class="icon-calendar"></i> <?php comment_date(); ?> </span>
-				<?php comment_text(); ?>
+				<span class="pull-right"> <i class="icon-calendar"></i> <?php comment_date(); ?> - <?php comment_time(); ?> </span>
+				<br />
+				<div id="comment-content">
+					<?php if ( $comment->comment_approved == '0' ) : ?>
+					<em><?php _e( 'Your comment is awaiting moderation.'); ?></em>
+					<br />
+					<?php endif; ?>
+					<?php comment_text(); ?>
+				</div>
 			</div>
+				<span class="pull-left"> <?php edit_comment_link(_('Edit')); ?></span>
+				<span class="pull-right">   <?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?></span>
 		</div>
-	<br />
-	<br />
-
 <?php
 
 }
