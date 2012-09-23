@@ -22,8 +22,11 @@
 <?php endif; ?>
 <?php  if( comments_open()) : ?>
 
+
+<button type="button" data-toggle="modal" data-target"#comment-form">Leave a comment</button>
+
 <!--Comment form-->
-<div id="comment-form">
+<!--<div id="comment-form" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<?php comment_form(); ?>
-</div>
+</div>-->
 <?php endif; ?>

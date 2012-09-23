@@ -1,4 +1,4 @@
 JQuery.ready(function($){
 
-	$('#reply').modal();
+	//$('#comment-form').modal();
 });
