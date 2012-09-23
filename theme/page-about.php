@@ -18,46 +18,9 @@
      </ul>
     </div>
     <div class="span9 posts about">
-      <h2 id="1"> Minecraft rocks my socks </h2>
-        <p> Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit 
-            amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-            tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-        <p> Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit 
-            amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-            tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-        <p> Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit 
-            amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-            tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-      <h2 id="2"> SOmething else </h2>
-        <p> Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit 
-            amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-            tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-        <p> Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit 
-            amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-            tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-        <p> Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit 
-            amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-            tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-      <h2 id="3"> Test </h2>
-        <p> Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit 
-            amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-            tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-        <p> Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit 
-            amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-            tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-        <p> Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit 
-            amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-            tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-      <h2 id="4"> Test2 </h2>
-        <p> Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit 
-            amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-            tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-        <p> Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit 
-            amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-            tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-        <p> Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit 
-            amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Do nec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-            tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+    	<?php if (have_posts()) : while (have_posts()) : the_post();?>
+    	<?php the_content();?> 
+    	<?php endwhile; endif; ?>     
     </div>
   </div>
 </div>

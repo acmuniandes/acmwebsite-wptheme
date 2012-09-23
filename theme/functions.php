@@ -71,6 +71,9 @@ function load_scripts_styles()
 {
 	wp_enqueue_script('bootstrap',get_template_directory_uri().'/js/bootstrap.min.js',array('jquery'),'', true);
 	wp_enqueue_script('jquery','/wp-includes/js/jquery/jquery.js','','',true);
+	if(is_page('about')){
+		wp_enqueue_script('page-about',get_template_directory_uri().'/js/page-about.js',array('jquery','bootstrap'),'',true);
+	}
 	
 	wp_enqueue_style('bootstrapcss',get_template_directory_uri().'/css/bootstrap.min.css');
 	wp_enqueue_style('responsivecss',get_template_directory_uri().'/css/bootstrap-responsive.min.css');
