@@ -16,28 +16,16 @@
 				<div class="span12">
 					<div>
 						<span id="author">
-							<strong><i class="icon-user"></i></strong><?php the_author(); ?> <br />
-							<strong><i class="icon-calendar"></i> </strong><?php the_date(); ?>
+							<p>
+								<strong><i class="icon-user"></i></strong> <?php the_author(); ?> <br />
+								<strong><i class="icon-calendar"></i></strong> <?php the_date(); ?>
+							</p>
 						</span>
 						<?php the_content(); ?>
 					</div>
 					<?php wp_link_pages(); ?>
-						<!--Comment Section-->
-					<div class="results">
-						<h3> Comentarios </h3>
-						<div class="well well-large">
-							<div class="singleresult" >
-								<span class="pull-left"> <i class="icon-user"></i> JALopezSilva </span>
-								<span class="pull-right"> <i class="icon-calendar"></i> 09/15/2012 </span>
-								<p>
-									Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-									Etiam porta sem malesuada magna mollis euismod.
-								</p>
-							</div>
-						</div>
-						<br />
-						<br />
-					</div>
+					<!--Comment Section-->
+					<?php comments_template(); ?>
 				</div>
 			</div> <!--Row fluid-->
 		<?php endwhile; ?>

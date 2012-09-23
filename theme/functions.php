@@ -83,6 +83,28 @@ function load_scripts_styles()
 	}
 }
 
+/**
+ * Function to display each comment using the theme's defined style.
+ */
+
+function display_custom_comment($comment){
+
+?>
+	      <div <?php comment_class('well well-large'); ?> >
+			<div class="singleresult" >';
+				<span class="pull-left"> <i class="icon-user"></i> <?php comment_author(); ?> </span>
+				<span class="pull-right"> <i class="icon-calendar"></i> <?php comment_date(); ?> </span>
+				<?php comment_text(); ?>
+			</div>
+		</div>
+	<br />
+	<br />
+
+<?php
+
+}
+
+
 /*
  * Lists the pagination links for pagination menu
  */
