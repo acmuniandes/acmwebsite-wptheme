@@ -45,4 +45,4 @@
 	<?php endif; ?>
 </div><!-- Close main-content -->
 
-<?php get_footer(); ?>:
+<?php get_footer(); ?>
