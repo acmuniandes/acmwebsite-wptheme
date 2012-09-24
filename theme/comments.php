@@ -23,7 +23,7 @@
 <!--Button to trigger modal-->
 <a  id="comment-button" href="#comment-form" role="button" class="btn btn-primary" data-toggle="modal"><?php echo _('Talk to us!') ?></a>
 <!--Comment form-->
-<div id="comment-form" class="modal hideit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div id="comment-form" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<?php custom_comment_form(); ?>
 </div>
 <?php endif; ?>
