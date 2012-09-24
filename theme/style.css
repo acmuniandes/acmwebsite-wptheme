@@ -232,3 +232,9 @@ display: none;
 .post-small{
 	height: 170px;
 }
+.photoContent{
+	display:none;
+	height: 100%;
+	width: 100%;
+	border: 1px solid lightgrey;
+}

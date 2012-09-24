@@ -73,8 +73,10 @@ function load_scripts_styles()
 	wp_enqueue_script('jquery','/wp-includes/js/jquery/jquery.js','','',true);
 	if(is_page('about')){
 		wp_enqueue_script('page-about',get_template_directory_uri().'/js/page-about.js',array('jquery','bootstrap'),'',true);
-	}else if(is_single()){
+	} else if(is_single()){
 		wp_enqueue_script('single-post',get_template_directory_uri().'/js/single-post.js',array('jquery','bootstrap'),'',true);
+	} else if (is_category('members')) {
+		wp_enqueue_script('members',get_template_directory_uri().'/js/members.js',array('jquery','bootstrap'),'',true);
 	}
 	
 	wp_enqueue_style('bootstrapcss',get_template_directory_uri().'/css/bootstrap.min.css');

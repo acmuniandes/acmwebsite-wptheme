@@ -8,7 +8,7 @@
 			</div>
 		</div>
 		<!--Grid like images-->
-		<div class="row-fluid posts projects" >
+		<div class="row-fluid" >
 			<?php 
 			$numpost = 0; 
 			if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -16,16 +16,22 @@
 					<div class="row-fluid">
 				<?php endif; ?>
 						<div class="span3 photo" >
-							<a class="photoPicture thumbnail" href="#"><img src="http://placehold.it/250x250" alt="" /></a>
-							<div class="photoContent" style="display:none;height: 100%;width: 100%;border: 1px solid lightgrey;">
+							<?php if (has_post_thumbnail()): ?><a class="photoPicture thumbnail" href="#"><?php the_post_thumbnail('full');?></a>
+							<div class="photoContent">
 								<?php the_content(); ?>
 							</div>
+							<?php else: ?>
+								<p>A member got lost</p>
+							<?php endif;?>
 						</div>
 				<?php if($numpost % 4 == 3) : ?>
 					</div>
+					<br />
 				<?php endif; ?>
-				<?php $numposts++; ?>
-			<?php endwhile; else:?>
+				<?php $numpost++; ?>
+			<?php endwhile; ?>
+			<?php if($numpost % 4 != 0 ) echo "</div> <!--closing it-->"; ?>
+			<?php else:?>
 				<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 			<?php endif; ?>
 		</div>
