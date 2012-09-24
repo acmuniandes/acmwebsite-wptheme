@@ -120,28 +120,40 @@ function display_custom_comment($comment, $args, $depth){
 /*
  * Lists the pagination links for pagination menu
  */
-function list_pagination_links(){
+function list_pagination_links($comments=false){
 	global $wp_query;
 	$wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
-	
-	$arr = paginate_links( array(
-		'base' => @add_query_arg('paged','%#%'),
-		'format' => '?paged=%#%',
-		'total' => $wp_query->max_num_pages,
-		'prev_next' => false,
-		'prev_text' => __('«'),
-		'next_text' => __('»'),
-		'type' => 'array'
-	) );
-	
-	if($current != 1){
-		echo '<li>'.get_previous_posts_link(__('«')).'</li>';
-	}
-	foreach ($arr as $value) {
-		echo '<li>'.$value.'</li>';
-	}
-	if($current != $wp_query->max_num_pages){
-		echo '<li>'.get_next_posts_link(__('»')).'</li>';
+	if($comments){
+		$arr = paginate_comments_links( array(
+			'base' => add_query_arg( 'cpage', '%#%' ),
+			'format' => '?cpage=%#%',
+			'echo' => false,
+			'add_fragment' => '#comments',
+			'prev_next' => true,
+			'prev_text' => __('«'),
+			'next_text' => __('»'),
+			'type' => 'list'
+		));
+		echo $arr;
+	} else{
+		$arr = paginate_links( array(
+			'base' => @add_query_arg('paged','%#%'),
+			'format' => '?paged=%#%',
+			'total' => $wp_query->max_num_pages,
+			'prev_next' => false,
+			'prev_text' => __('«'),
+			'next_text' => __('»'),
+			'type' => 'array'
+		));
+		if($current != 1){
+			echo '<li>'.get_previous_posts_link(__('«')).'</li>';
+		}
+		foreach ($arr as $value) {
+			echo '<li>'.$value.'</li>';
+		}
+		if($current != $wp_query->max_num_pages){
+			echo '<li>'.get_next_posts_link(__('»')).'</li>';
+		}
 	}
 }
 /**

@@ -10,8 +10,7 @@
 				<div class="span12">
 					<div class="pagination">
 						<ul>
-							<li> <?php previous_comments_link('«'); ?> </li>
-							<li> <?php next_comments_link('»'); ?> </li>
+							<?php list_pagination_links(true) ?>
 						</ul>
 					</div>
 				</div>
