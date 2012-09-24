@@ -14,9 +14,6 @@ General comments (optional).
 */
 
 
-body {
-	padding-bottom: 40px;
-}
 p {
 	text-align: justify;
 }
@@ -119,6 +116,19 @@ p {
 }
 .hideit{
 display: none;
+}
+
+@media all and (min-width: 981px) {
+	body {
+		padding-bottom: 40px;
+	}
+}
+
+@media all and (max-width: 980px) {
+	body {
+		padding-bottom: 0px;
+	}
+
 }
 
 /* Single post media query */
