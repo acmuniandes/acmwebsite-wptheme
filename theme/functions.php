@@ -108,7 +108,7 @@ function display_custom_comment($comment, $args, $depth){
 				</div>
 			</div>
 				<span class="pull-left"> <?php edit_comment_link(_('Edit')); ?></span>
-				<span class="pull-right">   <?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?></span>
+				<span class="pull-right">  <a id="<?php comment_ID(); ?>" class='comment-reply-link' href="#comment-form" data-toggle="modal"><? echo _('Reply'); ?></a> </span>
 		</div>
 <?php
 
@@ -142,7 +142,46 @@ function list_pagination_links(){
 		echo '<li>'.get_next_posts_link(__('»')).'</li>';
 	}
 }
+/**
+ * Displays the custom comment form within a modal dialog.
+ **/
+function custom_comment_form(){
+?>		
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+		<h3 id="comment-form-header"><?php comment_form_title(); ?> </h3>
+	</div>
+	<div>
+		<form action="<?php echo site_url( '/wp-comments-post.php' ); ?>" method="post" id="<?php echo esc_attr( $args['id_form'] ); ?>">
+			<div class="modal-body">
+				<?php if ( is_user_logged_in() ) : ?>
+					<h4> <?php global $current_user; get_currentuserinfo(); $username =  $current_user->user_login; echo _('Logged in as ').ucfirst($username); ?></h4>
+				<br />
+				<?php else : ?>
+				<div class="input-prepend">
+					<span class="add-on"><i class="icon-user"></i></span><input id="author" name="author" class="span2" size="50" type="text" placeholder="<?php echo _('Username'); ?>" />
+				</div><br />
+				<div class="input-prepend">
+					<span class="add-on">@</span><input id="email" name="email" class="span2" size="50" type="text" placeholder="<?php echo _('Email'); ?>" />
+				</div><br />
+				<div class="input-prepend">
+					<span class="add-on">http://</span><input id="url" name="url" class="span2"  size="50" type="text" placeholder="<?php echo _('Website');?>" />
+				</div><br />
+				<?php endif; ?>
+				<label> <?php echo _('Your comment'); ?> </label>
+				<textarea id="comment" name="comment" rows="8" cols="100"></textarea>
+			</div>
+			<p class="form-allowed-tags" style="margin:1em;">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;strike&gt; &lt;strong&gt; </code></p>
+			<div class="modal-footer">
+				<button class="btn" data-dismiss="modal" aria-hidden="true"><?php echo _('Cancel'); ?></button>
+				<input id="<?php echo esc_attr( $args['id_submit'] ); ?>" type="submit" class="btn btn-primary" value="<?php echo _('Post Comment'); ?>" />
+				<?php comment_id_fields( $post_id ); ?>
+			</div>
+		</form>
+	</div>
 
+<?php
+}
 add_theme_support('post-thumbnails');
 add_action('init','acmtheme_setup');
 add_action('pre_get_posts', 'modify_query');

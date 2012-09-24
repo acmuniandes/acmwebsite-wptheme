@@ -10,8 +10,8 @@
 				<div class="span12">
 					<div class="pagination">
 						<ul>
-							<li> <?php previous_comments_link('<<'); ?> </li>
-							<li> <?php next_comments_link('>>'); ?> </li>
+							<li> <?php previous_comments_link('«'); ?> </li>
+							<li> <?php next_comments_link('»'); ?> </li>
 						</ul>
 					</div>
 				</div>
@@ -21,12 +21,10 @@
 
 <?php endif; ?>
 <?php  if( comments_open()) : ?>
-
-
-<button type="button" data-toggle="modal" data-target"#comment-form">Leave a comment</button>
-
+<!--Button to trigger modal-->
+<a  id="comment-button" href="#comment-form" role="button" class="btn btn-primary" data-toggle="modal"><?php echo _('Talk to us!') ?></a>
 <!--Comment form-->
-<!--<div id="comment-form" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<?php comment_form(); ?>
-</div>-->
+<div id="comment-form" class="modal hideit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<?php custom_comment_form(); ?>
+</div>
 <?php endif; ?>
