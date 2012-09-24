@@ -1,5 +1,5 @@
 <?php if( have_comments() ): ?>
-<div class="results">
+<div class="comment-results">
 	<h3> <?php echo _('Comments'); ?> <small><?php comments_number('No responses','One Response','% Responses'); ?></small></h3>
 
 		<div id="comments">

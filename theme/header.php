@@ -22,9 +22,7 @@
 						<!--<a class="brand" href="#">ACM Uniandes</a>-->
 					<div class="nav-collapse collapse">
 						<?php wp_nav_menu(array('container'=> '','theme_location'=>'nav-menu','menu_class'=>'nav' ) ); ?>
-						<form class="navbar-search pull-right">
-							<input type="text" class="search-query" placeholder="Looking for something?" />
-						</form>
+						<?php get_search_form() ?>
 					</div>
 				</div>
 			</div>

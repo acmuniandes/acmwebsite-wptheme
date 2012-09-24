@@ -56,7 +56,7 @@ function the_content_limit($max_char, $more_link_text = '_(Read more…)', $stri
 	else if ((strlen($content)>$max_char) && ($espacio = strpos($content, " ", $max_char ))) {
 		$content = substr($content, 0, $espacio);
 		$content = $content;
-		echo force_balance_tags($content."…");
+		echo force_balance_tags($content."[…]");
 	}
 	else {
 		echo force_balance_tags($content);
