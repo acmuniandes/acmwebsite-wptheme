@@ -218,12 +218,12 @@
 						width: $(this).children('.photoPicture').css('width')
 					});
 					$(this).children('.photoPicture').fadeToggle(0,'',function(){
-						$(this).siblings('.photoContent').fadeToggle();
+						$(this).siblings('.photoContent').fadeToggle(0,'');
 					});
 			},
 				function(){
 					$(this).children('.photoContent').fadeToggle(0,'',function(){
-						$(this).siblings('.photoPicture').fadeToggle();
+						$(this).siblings('.photoPicture').fadeToggle(0,'');
 					});
 			});
 
