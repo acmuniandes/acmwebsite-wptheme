@@ -98,8 +98,8 @@ function display_custom_comment($comment, $args, $depth){
 ?>
 	      <div <?php comment_class('well well-large'); ?> >
 			<div class="singleresult" >
-				<span class="pull-left"> <i class="icon-user"></i> <?php comment_author(); ?> </span>
-				<span class="pull-right"> <i class="icon-calendar"></i> <?php comment_date(); ?> - <?php comment_time(); ?> </span>
+				<span id="author-<?php comment_ID(); ?>" class="pull-left"> <i class="icon-user"></i> <?php comment_author(); ?> </span>
+				<span id="date-<?php comment_ID(); ?>"class="pull-right"> <i class="icon-calendar"></i> <?php comment_date(); ?> - <?php comment_time(); ?> </span>
 				<br />
 				<div id="comment-content">
 					<?php if ( $comment->comment_approved == '0' ) : ?>
@@ -188,7 +188,7 @@ function custom_comment_form(){
 	<form action="<?php echo site_url( '/wp-comments-post.php' ); ?>" method="post" id="<?php echo esc_attr( $args['id_form'] ); ?>">
 	<div class="modal-header">
 		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-		<h3 id="comment-form-header"><?php comment_form_title(); ?> </h3>
+		<h3 id="comment-form-header"><?php echo _('Leave a comment'); ?> </h3>
 	</div>
 	<div class="modal-body">
 		<?php if ( is_user_logged_in() ) : ?>
