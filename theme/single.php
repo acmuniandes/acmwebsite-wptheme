@@ -23,16 +23,21 @@
 						</span>
 						<?php the_content(); ?>
 					</div>
-					<?php wp_link_pages(); ?>
+					<?php global $multipage; if( $multipage ) : ?>	
+						<div class="row-fluid">
+							<div class="span12">
+								<div class="pagination">
+									<ul>
+										<?php display_link_pages(); ?>
+									</ul>
+								</div>
+							</div>
+						</div>
+					<?php endif; ?>
 					<!--Comment Section-->
 					<?php comments_template(); ?>
 				</div>
 			</div> <!--Row fluid-->
 		<?php endwhile; ?>
 </div>
-
-
-
-
-
 <?php get_footer(); ?>

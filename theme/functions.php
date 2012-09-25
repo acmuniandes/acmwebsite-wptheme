@@ -116,7 +116,6 @@ function display_custom_comment($comment, $args, $depth){
 
 }
 
-
 /*
  * Lists the pagination links for pagination menu
  */
@@ -157,6 +156,31 @@ function list_pagination_links($comments=false){
 	}
 }
 /**
+ * Displays the pages for a multipage post.
+ */
+
+function display_link_pages()
+{
+	global $page, $numpages;
+	$prev = $page - 1;
+	$next = $page + 1;
+	
+	if( $prev )
+		echo '<li>'._wp_link_page($prev).__('«').'</a></li>';
+
+	echo '<li class="active">'._wp_link_page($page).'Page '.$page.'</a></li>';
+		
+	if( $page != $numpages )
+		echo '<li>'._wp_link_page($numpages).'Page '.$numpages.'</a></li>';
+
+	if($next <= $numpages)
+		echo '<li>'._wp_link_page($next).__('»').'</a></li>';
+
+
+		
+
+}
+/**
  * Displays the custom comment form within a modal dialog.
  **/
 function custom_comment_form(){
@@ -172,17 +196,17 @@ function custom_comment_form(){
 		<br />
 		<?php else : ?>
 		<div class="input-prepend">
-			<span class="add-on"><i class="icon-user"></i></span><input id="author" name="author" class="span2" size="50" type="text" placeholder="<?php echo _('Username'); ?>" />
+			<span class="add-on"><i class="icon-user"></i></span><input id="author" name="author" class="span5" size="50" type="text" placeholder="<?php echo _('Username'); ?>" />
 		</div><br />
 		<div class="input-prepend">
-			<span class="add-on">@</span><input id="email" name="email" class="span2" size="50" type="text" placeholder="<?php echo _('Email'); ?>" />
+			<span class="add-on">@</span><input id="email" name="email" class="span5" size="50" type="text" placeholder="<?php echo _('Email'); ?>" />
 		</div><br />
 		<div class="input-prepend">
-			<span class="add-on">http://</span><input id="url" name="url" class="span2"  size="50" type="text" placeholder="<?php echo _('Website');?>" />
+			<span class="add-on"><i class="icon-globe"></i></span><input id="url" name="url" class="span5"  size="50" type="text" placeholder="<?php echo _('Website');?>" />
 		</div><br />
 		<?php endif; ?>
 		<label> <?php echo _('Your comment'); ?> </label>
-		<textarea id="comment" name="comment" rows="8" cols="100"></textarea>
+		<textarea id="comment" name="comment" rows="8"></textarea>
 	</div>
 	<p class="form-allowed-tags" style="margin:1em;">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;strike&gt; &lt;strong&gt; </code></p>
 	<div class="modal-footer">
