@@ -56,7 +56,7 @@ function the_content_limit($max_char, $more_link_text = '_(Read more…)', $stri
 	else if ((strlen($content)>$max_char) && ($espacio = strpos($content, " ", $max_char ))) {
 		$content = substr($content, 0, $espacio);
 		$content = $content;
-		echo force_balance_tags($content."[…]");
+		echo force_balance_tags($content." […]");
 	}
 	else {
 		echo force_balance_tags($content);
@@ -98,8 +98,8 @@ function display_custom_comment($comment, $args, $depth){
 ?>
 	      <div <?php comment_class('well well-large'); ?> >
 			<div class="singleresult" >
-				<span class="pull-left"> <i class="icon-user"></i> <?php comment_author(); ?> </span>
-				<span class="pull-right"> <i class="icon-calendar"></i> <?php comment_date(); ?> - <?php comment_time(); ?> </span>
+				<span id="author-<?php comment_ID(); ?>" class="pull-left"> <i class="icon-user"></i> <?php comment_author(); ?> </span>
+				<span id="date-<?php comment_ID(); ?>"class="pull-right"> <i class="icon-calendar"></i> <?php comment_date(); ?> - <?php comment_time(); ?> </span>
 				<br />
 				<div id="comment-content">
 					<?php if ( $comment->comment_approved == '0' ) : ?>
@@ -115,7 +115,6 @@ function display_custom_comment($comment, $args, $depth){
 <?php
 
 }
-
 
 /*
  * Lists the pagination links for pagination menu
@@ -157,6 +156,31 @@ function list_pagination_links($comments=false){
 	}
 }
 /**
+ * Displays the pages for a multipage post.
+ */
+
+function display_link_pages()
+{
+	global $page, $numpages;
+	$prev = $page - 1;
+	$next = $page + 1;
+	
+	if( $prev )
+		echo '<li>'._wp_link_page($prev).__('«').'</a></li>';
+
+	echo '<li class="active">'._wp_link_page($page).'Page '.$page.'</a></li>';
+		
+	if( $page != $numpages )
+		echo '<li>'._wp_link_page($numpages).'Page '.$numpages.'</a></li>';
+
+	if($next <= $numpages)
+		echo '<li>'._wp_link_page($next).__('»').'</a></li>';
+
+
+		
+
+}
+/**
  * Displays the custom comment form within a modal dialog.
  **/
 function custom_comment_form(){
@@ -191,9 +215,9 @@ function custom_comment_form(){
 			<?php comment_id_fields( $post_id ); ?>
 		</div>
 	</form>
-
 <?php
 }
+
 add_theme_support('post-thumbnails');
 add_action('init','acmtheme_setup');
 add_action('pre_get_posts', 'modify_query');

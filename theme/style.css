@@ -14,9 +14,6 @@ General comments (optional).
 */
 
 
-body {
-	padding-bottom: 40px;
-}
 p {
 	text-align: justify;
 }
@@ -89,11 +86,7 @@ p {
 	text-shadow: 0 0 10px rgba(255,255,255,0.25);
 }
 
-#main-content {
-	margin-left: 8.54701%;
-	margin-right: 8.54701%;
-	width: 82.90598%
-}
+
 
 #footer-content {
 	width: 100%;
@@ -118,7 +111,66 @@ p {
 	margin-bottom: 1em;
 }
 .hideit{
-display: none;
+	display: none;
+}
+
+/* Main - content media query */
+@media all and (max-height: 500px)
+{
+	#main-content {
+		margin-left: 8.54701%;
+		margin-right: 8.54701%;
+		width: 82.90598%;
+		min-height: 275px;
+	}
+}
+
+
+@media all and (min-height: 501px) and (max-height: 700px)
+{
+	#main-content {
+		margin-left: 8.54701%;
+		margin-right: 8.54701%;
+		width: 82.90598%;
+		min-height: 475px;
+	}
+
+}
+
+@media all and (min-height: 701px) and (max-height:900px)
+{
+	#main-content {
+		margin-left: 8.54701%;
+		margin-right: 8.54701%;
+		width: 82.90598%;
+		min-height: 600px;
+	}
+
+}
+
+@media all and (min-height: 901px){
+
+	#main-content{
+		margin-left: 8.54701%;
+		margin-right: 8.54701%;
+		width: 82.90598%;
+		min-height: 800px;
+	}
+
+}
+
+/* Body media query */
+@media all and (min-width: 981px) {
+	body {
+		padding-bottom: 40px;
+	}
+}
+
+@media all and (max-width: 980px) {
+	body {
+		padding-bottom: 0px;
+	}
+
 }
 
 /* Single post media query */
