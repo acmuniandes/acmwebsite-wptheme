@@ -21,17 +21,22 @@ jQuery(function(){
 				jQuery('#contact-info').attr('placeholder','');
 			}, 2000);
 			
+		} else {
+			jQuery.ajax({
+				url : '/sendmail.php',
+				data: {'nombre': name, 'email': cemail, 'programa': program, 'mensaje': info},
+				type : 'POST',
+				success : function(response) {
+					if(response){
+						jQuery('#contact-name').val('');
+						jQuery('#contact-email').val('');
+						jQuery('#contact-url').val('');
+						jQuery('#contact-program').val('');
+						jQuery('#contact-info').val('');
+					}
+				}
+			});
 		}
 		
-		jQuery.ajax({
-			url : '/sendmail.php',
-			data: {'nombre': name, 'email': cemail, 'programa': program, 'mensaje': info},
-			type : 'POST',
-			success : function(response) {
-				if(response){
-					
-				}
-			}
-		});
 	});
 });
