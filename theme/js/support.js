@@ -1,5 +1,15 @@
 jQuery(function(){
+	var name_label = jQuery('#contact-name-label');
+	var email_label = jQuery('#contact-email-label');
+	var program_label = jQuery('#contact-program-label');
+	var info_label = jQuery('#contact-info-label');
+	
+
 	jQuery("#contact-send-btn").click(function(event){
+		if(name_label.is(':visible')) name_label.hide();
+		if(email_label.is(':visible')) email_label.hide();
+		if(program_label.is(':visible')) program_label.hide();
+		if(info_label.is(':visible')) info_label.hide();
 		
 		var name = jQuery('#contact-name').val();
 		var cemail = jQuery('#contact-email').val();
@@ -9,22 +19,15 @@ jQuery(function(){
 		
 		if(!name || !cemail || !program || !info){
 			event.stopPropagation();
-			jQuery('#contact-name').attr('placeholder','Dont forget to fill me! *');
-			jQuery('#contact-email').attr('placeholder','Dont forget to fill me! *');
-			jQuery('#contact-program').attr('placeholder','Dont forget to fill me! *');
-			jQuery('#contact-info').attr('placeholder','Dont forget to fill me! *');
-			
-			setTimeout(function(){
-				jQuery('#contact-name').attr('placeholder','Name *');
-				jQuery('#contact-email').attr('placeholder','Email *');
-				jQuery('#contact-program').attr('placeholder','Academic Program *');
-				jQuery('#contact-info').attr('placeholder','');
-			}, 2000);
+			if (!name) name_label.show("slide", { direction: "left" }, "fast");
+			if (!cemail) email_label.show("slide", { direction: "left" }, "fast");
+			if (!program) program_label.show("slide", { direction: "left" }, "fast");
+			if (!info) info_label.show("slide", { direction: "left" }, "fast");
 			
 		} else {
 			jQuery.ajax({
 				url : '/sendmail.php',
-				data: {'nombre': name, 'email': cemail, 'programa': program, 'mensaje': info},
+				data: {'nombre': name, 'email': cemail, 'programa': program, 'mensaje': info, 'website': url},
 				type : 'POST',
 				success : function(response) {
 					if(response){
@@ -33,10 +36,21 @@ jQuery(function(){
 						jQuery('#contact-url').val('');
 						jQuery('#contact-program').val('');
 						jQuery('#contact-info').val('');
+						name_label.hide();
+						email_label.hide();
+						program_label.hide();
+						info_label.hide();
 					}
 				}
 			});
 		}
 		
+	});
+	
+	jQuery("#contact-cancel-btn, #btn-close").click(function(){
+		name_label.hide();
+		email_label.hide();
+		program_label.hide();
+		info_label.hide();
 	});
 });
