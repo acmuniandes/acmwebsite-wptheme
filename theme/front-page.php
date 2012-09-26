@@ -6,7 +6,7 @@
         		<div id="description">
 	        		<p>The ACM Student Chapter <a href="http://uniandes.edu.co">@Universidad de los Andes</a> is a group of motivated students passionate about computer science and passionate about experimenting, learning and building awesome stuff for our community.</p>
 	        		<br/>
-	        		<p><a class="btn btn-primary btn-large">Learn more »</a></p>
+	        		<p><a href="<?php echo get_permalink(get_page_by_title('Nosotros')) ?>" class="btn btn-primary btn-large">Learn more »</a></p>
         		</div>
       		</header>
     	</div>

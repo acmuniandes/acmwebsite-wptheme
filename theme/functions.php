@@ -71,6 +71,7 @@ function load_scripts_styles()
 {
 	wp_enqueue_script('bootstrap',get_template_directory_uri().'/js/bootstrap.min.js',array('jquery'),'', true);
 	wp_enqueue_script('jquery','/wp-includes/js/jquery/jquery.js','','',true);
+	wp_enqueue_script('support',get_template_directory_uri().'/js/support.js',array('jquery'),'', true);
 	if(is_page('about')){
 		wp_enqueue_script('page-about',get_template_directory_uri().'/js/page-about.js',array('jquery','bootstrap'),'',true);
 	} else if(is_single()){

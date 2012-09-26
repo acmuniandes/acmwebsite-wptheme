@@ -24,6 +24,41 @@
 				</div>
 			</div>
 		<?php } ?>
+		<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal hide fade" id="contact-form">
+			<div class="modal-header">
+				<button aria-hidden="true" data-dismiss="modal" class="close" type="button">x</button>
+				<h3 id="comment-form-header">Join us!</h3>
+			</div>
+			<div class="modal-body">
+				<div class="input-prepend">
+					<span class="add-on"><i class="icon-user"></i></span>
+					<input type="text" placeholder="Name *" size="50" name="author" id="contact-name">
+				</div>
+				<br>
+				<div class="input-prepend">
+					<span class="add-on">@</span>
+					<input type="text" placeholder="Email *" size="50" name="email" id="contact-email">
+				</div>
+				<br>
+				<div class="input-prepend">
+					<span class="add-on"><i class="icon-book"></i></span>
+					<input type="text" placeholder="Academic Program *" size="50" name="url" id="contact-program">
+				</div>
+				<br>
+				<div class="input-prepend">
+					<span class="add-on"><i class="icon-globe"></i></span>
+					<input type="text" placeholder="Got something to show off?" size="50" name="url" id="contact-url">
+				</div>
+				<br>
+				<label> Tell us about yourself: *</label>
+				<textarea rows="7" name="contact-info" id="contact-info"></textarea>
+
+			</div>
+			<div class="modal-footer">
+				<button aria-hidden="true" data-dismiss="modal" class="btn"> Cancel </button>
+				<button aria-hidden="true" data-dismiss="modal" class="btn btn-primary" id="contact-send-btn"> Send it over </button>
+			</div>
+		</div>
 		<?php wp_footer(); ?>
 	</body>
 </html>

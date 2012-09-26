@@ -21,7 +21,12 @@
 					<a class="brand" href="#"><img src="<?php bloginfo('template_url')?>/img/logo.png"></a>
 						<!--<a class="brand" href="#">ACM Uniandes</a>-->
 					<div class="nav-collapse collapse">
-						<?php wp_nav_menu(array('container'=> '','theme_location'=>'nav-menu','menu_class'=>'nav' ) ); ?>
+						<ul class="nav">
+							<?php wp_nav_menu(array('container'=> false,'theme_location'=>'nav-menu', 'items_wrap' => '%3$s') ); ?>
+							<li>
+								<a href="#contact-form" data-toggle="modal">Contacto</a>
+							</li>
+						</ul>
 						<?php get_search_form() ?>
 					</div>
 				</div>
