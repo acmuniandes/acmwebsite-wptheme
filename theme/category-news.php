@@ -36,7 +36,8 @@
 	
 	
 	<?php endwhile; ?>
-	 <?php  if(($numpost == 4)|| ($numpost==3) || ($numpost == 1)) echo '</div>'; ?> 
+	<?php  if(($numpost == 4)|| ($numpost==3) || ($numpost == 1)) echo '</div>'; ?> 
+
 					</div> <!--newsupper-->
 			</div> <!--row-fluid-->
 			<div class="row-fluid">
