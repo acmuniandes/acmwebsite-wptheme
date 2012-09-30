@@ -190,9 +190,9 @@ function display_link_pages()
  **/
 function custom_comment_form(){
 ?>		
-	<form action="<?php echo site_url( '/wp-comments-post.php' ); ?>" method="post" id="<?php echo esc_attr( $args['id_form'] ); ?>">
+	<form id="comment-form" action="<?php echo site_url( '/wp-comments-post.php' ); ?>" method="post" id="<?php echo esc_attr( $args['id_form'] ); ?>">
 		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+			<button id="comment-close-btn" type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
 			<h3 id="comment-form-header"><?php comment_form_title(); ?> </h3>
 		</div>
 		<div class="modal-body">
@@ -200,22 +200,35 @@ function custom_comment_form(){
 				<h4 id="user-logged-in"> <?php global $current_user; get_currentuserinfo(); $username =  $current_user->user_login; echo _('Logged in as ').ucfirst($username); ?></h4>
 			<br />
 			<?php else : ?>
-			<div class="input-prepend">
-				<span class="add-on"><i class="icon-user"></i></span><input id="author" name="author" class="span5" size="50" type="text" placeholder="<?php echo _('Username *'); ?>" />
-			</div><br />
-			<div class="input-prepend">
-				<span class="add-on">@</span><input id="email" name="email" class="span5" size="50" type="text" placeholder="<?php echo _('Email *'); ?>" />
-			</div><br />
-			<div class="input-prepend">
-				<span class="add-on"><i class="icon-globe"></i></span><input id="url" name="url" class="span5"  size="50" type="text" placeholder="<?php echo _('Website');?>" />
-			</div><br />
+			<div class="row-fluid">
+				<div id="div-submit-author" class="input-prepend span6">
+					<span class="add-on"><i class="icon-user"></i></span>
+					<input id="submit-author" name="author" size="50" type="text" placeholder="<?php echo _('Username *'); ?>" />
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div id="div-submit-email" class="input-prepend span6">
+					<span class="add-on">@</span>
+					<input id="submit-email" name="email" size="50" type="text" placeholder="<?php echo _('Email *'); ?>" />
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div id="div-submit-url" class="input-prepend span6">
+					<span class="add-on"><i class="icon-globe"></i></span>
+					<input id="submit-url" name="url"  size="50" type="text" placeholder="<?php echo _('Website');?>" />
+				</div>
+			</div>
 			<?php endif; ?>
-			<label> <?php echo _('Your comment *'); ?> </label>
-			<textarea id="comment" name="comment" rows="8"></textarea>
+			<div class="row-fluid">
+				<div id="div-comment" class="span6">
+					<label> <?php echo _('Your comment: *'); ?> </label>
+					<textarea id="comment" name="comment" rows="8"></textarea>
+				</div>
+			</div>
 			<p class="form-allowed-tags" style="margin:1em;">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;strike&gt; &lt;strong&gt; </code></p>
 		</div>
 		<div class="modal-footer">
-			<button class="btn" data-dismiss="modal" aria-hidden="true"><?php echo _('Cancel'); ?></button>
+			<button id="comment-cancel-btn" class="btn" data-dismiss="modal" aria-hidden="true"><?php echo _('Cancel'); ?></button>
 			<input id="comment-btn-submit" type="submit" class="btn btn-primary" value="<?php echo _('Post Comment'); ?>" />
 			<?php comment_id_fields( $post_id ); ?>
 		</div>

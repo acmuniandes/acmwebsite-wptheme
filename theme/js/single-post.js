@@ -15,17 +15,17 @@ jQuery(function(){
 
 
 	//Comment form validation.
-	jQuery('#comment-btn-submit').click(function(event){
+	jQuery('#comment-form').submit(function(event){
 
-		var array = jQuery('#user-logged-in').length > 0 ? ['comment'] : ['author','id', 'url'];
-
-		if(support.validate(array)){
-
-
-
-		}else{
-			event.stopPropagation();
+		var array = jQuery('#user-logged-in').length > 0 ? ['comment'] : ['submit-author','submit-email', 'comment'];
+		if(!support.validate(array, ["div-submit-author","div-submit-email","div-comment"], "span6")){
+			event.preventDefault();
 		}
+
+	});
+
+	jQuery('#comment-close-btn, #comment-cancel-btn').click(function(){
+		support.clearLabels(['submit-author','submit-email','comment']);
 
 	});
 	

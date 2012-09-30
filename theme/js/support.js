@@ -163,7 +163,7 @@ var support =  (function(jQuery){
 	}
 	return {
 		readyHandler : readyHandler,
-	    clearLabels: clearLabels,
+		clearLabels: clearLabels,
 		validate: validate,
 		custom_alert: custom_alert
 	}
