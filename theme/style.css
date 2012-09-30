@@ -24,9 +24,12 @@ p {
 }
 .log-out{
 	color:#252525;
+	text-decoration: none;
+	cursor: pointer;
 }
 .log-out:hover{
 	color: rgba(0,0,0,0.5);
+	text-decoration: underline;
 }
 .posts a {
 	float: right;
