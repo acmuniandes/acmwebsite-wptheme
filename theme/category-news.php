@@ -54,5 +54,8 @@
 		
 	<?php else:?>
 	<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+	</div><!--end upper news -->
+	</div> 
+    </div>
 	<?php endif; ?>
 <?php get_footer(); ?>
