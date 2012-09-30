@@ -35,11 +35,11 @@
 			if(!jQuery('#' + fields[i]).val())
 			{
 				var filled = false;
-				var style = cssClass ? 'class="' + cssClass + ' hide"': "";
+				var style = cssClass ? 'class="' + cssClass + '"': "";
 					
-				var append = jQuery('<div id="label-' + fields[i] +'" ' + style + '><span id="contact-name-label" class="label label-important">Please fill me!</span></div>');
+				var append = jQuery('<div id="label-' + fields[i] +'" ' + style + '><span id="span-' + fields[i] + '" class="label label-important hide">Please fill me!</span></div>');
 				jQuery(append).insertAfter('#' + afterWho[i]);
-				jQuery('#label-' + fields[i]).show("slide", { direction: "left" }, "fast");
+				jQuery('#span-' + fields[i]).show("slide", { direction: "left" }, "fast");
 			}
 
 			ret = ret && filled;
