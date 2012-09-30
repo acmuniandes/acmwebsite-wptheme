@@ -352,7 +352,11 @@ function log_in_user(){
 	if(is_wp_error($user))
 		echo false;
 	else{
-		echo '<span id ="user-info" class="user-info"><i class="icon-user"></i>&nbsp;&nbsp;'. $username .' - <span class="log-out">Logout</span></span>';
+		if(is_single()){
+			echo json_encode(array('reload' => true));
+		} else {
+			echo '<span id ="user-info" class="user-info"><i class="icon-user"></i>&nbsp;&nbsp;'. $username .' - <span class="log-out">Logout</span></span>';
+		}
 	}
 	 
  	exit();
@@ -364,7 +368,11 @@ function log_in_user(){
  */
 function log_out_user(){
 	wp_logout();
-	echo '<a id ="user-info" href="#login-form" class="user-info" data-toggle="modal"><i class="icon-user"></i></a>';
+	if(is_single()){
+		echo json_encode(array('reload' => true));
+	} else {
+		echo '<a id ="user-info" href="#login-form" class="user-info" data-toggle="modal"><i class="icon-user"></i></a>';
+	}
 	exit();
 }
 

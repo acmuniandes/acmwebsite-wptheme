@@ -62,8 +62,12 @@ var support =  (function(jQuery){
 				{
 					if(response){
 						custom_alert('Well Done!', 'You have successfully logged out.', 'success');
-						jQuery('#user-info').remove();
-						jQuery(response).insertAfter('#navbar');
+						if (response.reload) {
+							document.location.reload();
+						} else {
+							jQuery('#user-info').remove();
+							jQuery(response).insertAfter('#navbar');
+						}
 					}
 				}
 			});
@@ -98,9 +102,13 @@ var support =  (function(jQuery){
 					{
 						if(response){
 							custom_alert('Well Done!', 'You have successfully logged in.', 'success');
-							jQuery('#user-info').remove();
-							jQuery(response).insertAfter('#navbar');
-							bind_logout_btn(jQuery('#user-info .log-out'));
+							if (response.reload) {
+								document.location.reload();
+							} else {
+								jQuery('#user-info').remove();
+								jQuery(response).insertAfter('#navbar');
+								bind_logout_btn(jQuery('#user-info .log-out'));
+							}
 						} else {
 							custom_alert('Oops!', 'Better check yoself.', 'error');
 						}
