@@ -330,27 +330,31 @@ function display_login_dialog()
 function log_in_user(){
 
 
-	 $username = $_POST["user"];
-	 $pass = $_POST["pass"];
-	 $creds = array('user_login' => $username, 'user_password' => $pass);
-	 $user = wp_signon($creds,false);
+	$username = $_POST["user"];
+	$pass = $_POST["pass"];
+	$creds = array('user_login' => $username, 'user_password' => $pass);
+	$user = wp_signon($creds,false);
 
 	if(is_wp_error($user))
 		echo false;
 	else{
-		echo '<span class="user-info"><i class="icon-user"></i>&nbsp;&nbsp;'. $username .' - <a href="'. wp_logout_url(get_permalink()) .'" class="log-out">Logout</a></span>';
+		echo '<span class="user-info"><i class="icon-user"></i>&nbsp;&nbsp;'. $username .' - <a href="'. wp_logout_url(site_url()) .'" class="log-out">Logout</a></span>';
 	}
 	 
- die();
-
+ 	exit();
 }
 
+function go_home(){
+  wp_redirect( site_url() );
+  exit();
+}
 
 //Ajax
 add_action("wp_ajax_nopriv_log_in_user","log_in_user");
 
 
 //Normal
+add_action('wp_logout','go_home');
 add_filter('show_admin_bar','_return false');
 add_theme_support('post-thumbnails');
 add_action('init','acmtheme_setup');

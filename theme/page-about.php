@@ -11,10 +11,10 @@
 	<div class="row-fluid">
 		<div id="sidebar" class="span3">
 			<ul class="nav nav-list bs-docs-sidenav affix-top" data-spy="affix" data-offset-top="50">
-				<li class="active"><a href="#1">¿Quiénes somos? <i class="icon-chevron-right pull-right"></i></a></li>
-				<li><a href="#2">¿Qué hacemos? <i class="icon-chevron-right pull-right"></i></a></li>
-				<li><a href="#3">¿Qué esperamos? <i class="icon-chevron-right pull-right"></i></a></li>
-				<li><a href="#4">¿Qué es ACM? <i class="icon-chevron-right pull-right"></i></a></li>
+				<li class="active"><a href="#1">¿Qué es ACM?<i class="icon-chevron-right pull-right"></i></a></li>
+				<li><a href="#2">¿Quiénes somos?<i class="icon-chevron-right pull-right"></i></a></li>
+				<li><a href="#3">¿Qué hacemos?<i class="icon-chevron-right pull-right"></i></a></li>
+				<li><a href="#4">¿Qué esperamos?<i class="icon-chevron-right pull-right"></i></a></li>
 			</ul>
 		</div>
 		<div class="span9 posts about">
