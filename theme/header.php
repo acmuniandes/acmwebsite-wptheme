@@ -14,12 +14,11 @@
 		<?php wp_head();?>
 	</head>
 	<body <?php body_class();?>>
-		<div class="navbar navbar-fixed-bottom">
+		<div id="navbar" class="navbar navbar-fixed-bottom">
 			<div class="navbar-inner">
 				<div class="container">
 					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
 					<a class="brand" href="#"><img src="<?php bloginfo('template_url')?>/img/logo.png"></a>
-						<!--<a class="brand" href="#">ACM Uniandes</a>-->
 					<div class="nav-collapse collapse">
 						<ul class="nav">
 							<?php wp_nav_menu(array('container'=> false,'theme_location'=>'nav-menu', 'items_wrap' => '%3$s') ); ?>
@@ -27,8 +26,15 @@
 								<a href="#contact-form" data-toggle="modal">Contacto</a>
 							</li>
 						</ul>
-						<?php get_search_form() ?>
+							<?php get_search_form() ?>
 					</div>
 				</div>
 			</div>
 		</div>
+		<?php if(!is_front_page()) : ?>
+			<?php if( !is_user_logged_in()) : ?>
+				<a id ="user-info" href="#login-form" class="user-info" data-toggle="modal"><i class="icon-user"></i></a>
+			<?php else: global $user_login; get_currentuserinfo(); ?>
+				<span class="user-info"><i class="icon-user"></i>&nbsp;&nbsp;<?php echo $user_login; ?> - <a href="<?php echo wp_logout_url(get_permalink()); ?>" class="log-out">Logout</a></span>
+			<?php endif; ?>
+		<?php endif; ?>

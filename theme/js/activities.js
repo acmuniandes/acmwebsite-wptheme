@@ -22,7 +22,7 @@ jQuery(function(){
 				if(response){
 					//Clean all and notify of OKAY.
 
-					var html = $('<div class="alert fade"><button class="close" data-dismiss="alert" type="button">x</button><strong> Thank you </strong> Thank you for your submission. You\'ll be hearing from us shortly');
+					var html = $('<div class="alert fade"><button class="close" data-dismiss="alert" type="button">x</button><strong> Thank you </strong> Thank you for your submission. You\'ll be hearing from us shortly</div>');
 					alert(html);
 				}else
 				{	

@@ -1,4 +1,31 @@
 jQuery(function(){
+
+	jQuery('#wp-submit').click(function(){
+
+		//Valide nonempty.
+		//TODO
+
+		var username = jQuery('#user_login').val();
+		var password = jQuery('#user_pass').val();
+
+		jQuery.ajax({
+			url: ajax_script.ajaxurl,
+			data: { action: 'log_in_user','user' : username, 'pass' : password},
+			type: 'POST',
+			success : function(response)
+			{
+			
+				if(response){
+					jQuery('#user-info').remove();
+					jQuery(response).insertAfter('#navbar');
+				}
+			}
+		});
+	});
+
+
+
+
 	var name_label = jQuery('#contact-name-label');
 	var email_label = jQuery('#contact-email-label');
 	var program_label = jQuery('#contact-program-label');
