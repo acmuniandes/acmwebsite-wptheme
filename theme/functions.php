@@ -339,23 +339,30 @@ function log_in_user(){
 	if(is_wp_error($user))
 		echo false;
 	else{
-		echo '<span class="user-info"><i class="icon-user"></i>&nbsp;&nbsp;'. $username .' - <a href="'. wp_logout_url(site_url()) .'" class="log-out">Logout</a></span>';
+		echo '<span id ="user-info" class="user-info"><i class="icon-user"></i>&nbsp;&nbsp;'. $username .' - <span class="log-out">Logout</span></span>';
 	}
 	 
  	exit();
 }
 
-function go_home(){
-  wp_redirect( site_url() );
-  exit();
+/**
+ * AJAX - Function
+ * Logs in an user through AJAX.
+ */
+function log_out_user(){
+	wp_logout();
+	echo '<a id ="user-info" href="#login-form" class="user-info" data-toggle="modal"><i class="icon-user"></i></a>';
+	exit();
 }
+
+
 
 //Ajax
 add_action("wp_ajax_nopriv_log_in_user","log_in_user");
+add_action("wp_ajax_log_out_user","log_out_user");
 
 
 //Normal
-add_action('wp_logout','go_home');
 add_filter('show_admin_bar','_return false');
 add_theme_support('post-thumbnails');
 add_action('init','acmtheme_setup');
