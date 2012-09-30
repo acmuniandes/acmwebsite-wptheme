@@ -73,6 +73,8 @@ function load_scripts_styles()
 	wp_enqueue_script('jquery','/wp-includes/js/jquery/jquery.js','','',true);
 	wp_enqueue_script('jqueryui',get_template_directory_uri().'/js/jqueryui.min.js',array('jquery'),'', true);
 	wp_enqueue_script('support',get_template_directory_uri().'/js/support.js',array('jquery','jqueryui'),'', true);
+	wp_localize_script('support','ajax_script', array('ajaxurl'=> admin_url('admin-ajax.php')));
+
 	if(is_page('about')){
 		wp_enqueue_script('page-about',get_template_directory_uri().'/js/page-about.js',array('jquery','bootstrap'),'',true);
 	} else if(is_single()){
@@ -220,6 +222,140 @@ function custom_comment_form(){
 <?php
 }
 
+
+/**
+ * Displays the dialog for contact.
+ */
+
+function display_contact_dialog()
+{
+?>
+		<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal hide fade" id="contact-form">
+			<div class="modal-header">
+				<button aria-hidden="true" data-dismiss="modal" class="close" type="button" id="btn-close">x</button>
+				<h3 id="comment-form-header"><?php echo __('Join us!')?></h3>
+			</div>
+			<div class="modal-body">
+				<div class="row-fluid">
+					<div class="input-prepend span6">
+						<span class="add-on"><i class="icon-user"></i></span>
+						<input type="text" placeholder="<?php echo __('Name *')?>" size="50" name="contact-name" id="contact-name" />
+					</div>
+					<div class="span6"><span class="label label-important hide" id="contact-name-label"><?php echo __('Please fill me!')?></span></div>
+				</div>
+				<br>
+				<div class="row-fluid">
+					<div class="input-prepend span6">
+						<span class="add-on">@</span>
+						<input type="text" placeholder="<?php echo __('Email *')?>" size="50" name="contact-email" id="contact-email" />
+					</div>
+					<div class="span6"><span class="label label-important hide" id="contact-email-label"><?php echo __('Please fill me!')?></span></div>					
+				</div>
+				<br>
+				<div class="row-fluid">
+					<div class="input-prepend span6">
+					<span class="add-on"><i class="icon-book"></i></span>
+						<input type="text" placeholder="<?php echo __('Academic Program *')?>" size="50" name="contact-program" id="contact-program" />
+					</div>
+					<div class="span6"><span class="label label-important hide" id="contact-program-label"><?php echo __('Please fill me!')?></span></div>
+				</div>
+				<br>
+				<div class="row-fluid">
+					<div class="input-prepend span6">
+						<span class="add-on"><i class="icon-globe"></i></span>
+						<input type="text" placeholder="<?php echo __('Got something to show off?')?>" size="50" name="contact-url" id="contact-url" />
+					</div>
+				</div>
+				<br>
+				<div class="row-fluid">
+					<div class="span6">
+						<label> <?php echo __('Tell us about yourself: *')?></label>
+						<textarea rows="7" name="contact-info" id="contact-info"></textarea>
+					</div>
+					<div class="span6"><span class="label label-important hide" id="contact-info-label"><?php echo __('Please fill me!')?></span></div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button aria-hidden="true" data-dismiss="modal" class="btn" id="contact-cancel-btn"> <?php echo __('Cancel')?> </button>
+				<button aria-hidden="true" data-dismiss="modal" class="btn btn-primary" id="contact-send-btn"> <?php echo __('Send it over')?> </button>
+			</div>
+		</div>
+
+<?php
+}
+
+/**
+ * Display login dialog.
+ */
+
+function display_login_dialog()
+{
+?>
+	<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal hide fade" id="login-form">
+		<div class="modal-header">
+			<button aria-hidden="true" data-dismiss="modal" class="close" type="button" id="btn-close">x</button>
+			<h3 id="comment-form-header"><?php echo __('Who are you?')?></h3>
+		</div>
+		<div class="modal-body">
+			<div class="row-fluid">
+				<div class="span6">
+					<p class="login-username">
+						<label for="user_login"><?php echo __("Username"); ?></label>
+						<input type="text" tabindex="10" size="20" value="" class="input" id="user_login" name="log">
+					</p>
+				</div>
+				<div class="span6">
+					<p class="login-password">
+						<label for="user_pass"><?php echo __("Password"); ?></label>
+						<input type="password" tabindex="20" size="20" value="" class="input" id="user_pass" name="pwd">
+					</p>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="span12">
+					<p class="text-info"> Inicia sesion con tus credenciales de la Universidad de los Andes. </p>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button aria-hidden="true" data-dismiss="modal" class="btn" id="contact-cancel-btn"> <?php echo __('Cancel')?> </button>
+			<button id="wp-submit" name="wp-submit" aria-hidden="true" data-dismiss="modal" class="btn btn-primary" id="login-send-btn"> <?php echo __('Login')?> </button>
+			</div>
+	</div>
+
+
+<?php
+}
+
+/**
+ * AJAX - Function
+ * Logs in an user through AJAX.
+ */
+function log_in_user(){
+
+
+	 $username = $_POST["user"];
+	 $pass = $_POST["pass"];
+	 $creds = array('user_login' => $username, 'user_password' => $pass);
+	 $user = wp_signon($creds,false);
+
+	if(is_wp_error($user))
+		echo false;
+	else{
+		echo '<span class="user-info"><i class="icon-user"></i>&nbsp;&nbsp;'. $username .' - <a href="'. wp_logout_url(get_permalink()) .'" class="log-out">Logout</a></span>';
+	}
+	 
+ die();
+
+}
+
+
+//Ajax
+add_action("wp_ajax_nopriv_log_in_user","log_in_user");
+
+
+//Normal
+add_filter('show_admin_bar','_return false');
 add_theme_support('post-thumbnails');
 add_action('init','acmtheme_setup');
 add_action('pre_get_posts', 'modify_query');

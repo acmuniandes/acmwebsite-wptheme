@@ -17,6 +17,17 @@ General comments (optional).
 p {
 	text-align: justify;
 }
+.user-info{
+	position: absolute;
+	right: 10em;
+	top: 3em;
+}
+.log-out{
+	color:#252525;
+}
+.log-out:hover{
+	color: rgba(0,0,0,0.5);
+}
 .posts a {
 	float: right;
 }
