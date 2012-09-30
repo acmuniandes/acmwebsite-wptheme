@@ -197,7 +197,7 @@ function custom_comment_form(){
 		</div>
 		<div class="modal-body">
 			<?php if ( is_user_logged_in() ) : ?>
-				<h4> <?php global $current_user; get_currentuserinfo(); $username =  $current_user->user_login; echo _('Logged in as ').ucfirst($username); ?></h4>
+				<h4 id="user-logged-in"> <?php global $current_user; get_currentuserinfo(); $username =  $current_user->user_login; echo _('Logged in as ').ucfirst($username); ?></h4>
 			<br />
 			<?php else : ?>
 			<div class="input-prepend">
@@ -216,7 +216,7 @@ function custom_comment_form(){
 		</div>
 		<div class="modal-footer">
 			<button class="btn" data-dismiss="modal" aria-hidden="true"><?php echo _('Cancel'); ?></button>
-			<input id="<?php echo esc_attr( $args['id_submit'] ); ?>" type="submit" class="btn btn-primary" value="<?php echo _('Post Comment'); ?>" />
+			<input id="comment-btn-submit" type="submit" class="btn btn-primary" value="<?php echo _('Post Comment'); ?>" />
 			<?php comment_id_fields( $post_id ); ?>
 		</div>
 	</form>
