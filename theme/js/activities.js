@@ -1,4 +1,16 @@
 jQuery(function(){
+	
+	  jQuery('input[type=file]').each(function(){
+		    jQuery(this).addClass('file').addClass('hidden');
+		    jQuery(this).parent().append(jQuery('<div class="fakefile" />').append(jQuery('<input type="text" />').attr('id',jQuery(this).attr('id')+'__fake')).append(jQuery('<i class="icon-file"></i>')));
+		 
+		    jQuery(this).bind('change', function() {
+		      jQuery('#'+jQuery(this).attr('id')+'__fake').val(jQuery(this).val());;
+		    });
+		    jQuery(this).bind('mouseout', function() {
+		      jQuery('#'+jQuery(this).attr('id')+'__fake').val(jQuery(this).val());;
+		    });
+		  });
 
 	/* Uploading function. Assumes existence of a button (#upload-button) */
 
@@ -22,7 +34,7 @@ jQuery(function(){
 				if(response){
 					//Clean all and notify of OKAY.
 
-					var html = $('<div class="alert fade"><button class="close" data-dismiss="alert" type="button">x</button><strong> Thank you </strong> Thank you for your submission. You\'ll be hearing from us shortly</div>');
+					var html = jQuery('<div class="alert fade"><button class="close" data-dismiss="alert" type="button">x</button><strong> Thank you </strong> Thank you for your submission. You\'ll be hearing from us shortly</div>');
 					alert(html);
 				}else
 				{	
@@ -34,6 +46,6 @@ jQuery(function(){
 			});
 		}
 
-	}
+	});
 });
 

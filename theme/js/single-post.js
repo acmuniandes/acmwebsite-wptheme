@@ -1,5 +1,18 @@
 jQuery(function(){
 
+	//Styling of the input type file.
+
+	jQuery('#div-upload-file').click(function(){
+		//Triggers click event on hidden input type.
+		jQuery('#file-input').click();
+	});
+
+	jQuery('#file-input').change(function(){
+		var name = jQuery('#file-input')[0].files[0].name;
+		jQuery('#fake-file-id').attr('value', 'your/secret/path/' + name);
+		jQuery('#div-upload-file').attr('class','input-prepend span6 control-group success');
+	});
+
 
 	//Handling of the reply label.
 	jQuery('.comment-reply-link').click(function(){
