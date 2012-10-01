@@ -40,9 +40,9 @@ p {
 	color: rgba(0,0,0,0.5);
 	text-decoration: underline;
 }
-.posts a {
-	float: right;
-}
+/*.posts a {
+	float: right; Need to comment this out because its affecting any regular links (Different from 'Keep Reading') inside a post
+}*/
 .posts.news {
 	height: 100%;
 }

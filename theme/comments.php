@@ -21,7 +21,7 @@
 <?php endif; ?>
 <?php  if( comments_open()) : ?>
 <!--Button to trigger modal-->
-<a  id="comment-button" href="#comment-form" role="button" class="btn btn-primary" data-toggle="modal"><?php echo _('Talk to us!') ?></a>
+<a  id="comment-button" href="#comment-form" role="button" class="btn btn-primary pull-right" data-toggle="modal"><?php echo _('Talk to us!') ?></a>
 <!--Comment form-->
 <div id="comment-form" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<?php custom_comment_form(); ?>

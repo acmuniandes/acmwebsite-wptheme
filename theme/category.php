@@ -17,7 +17,7 @@
 						<?php the_title("<h2>", "</h2>"); ?>
 						<br />
 						<?php the_content_limit(1700, ""); ?>
-						<a href="<?php the_permalink() ?>" rel="bookmark" title="permanent link to <?php the_title_attribute(); ?>">Keep on Reading </a>
+						<a class="pull-right" href="<?php the_permalink() ?>" rel="bookmark" title="permanent link to <?php the_title_attribute(); ?>">Keep on Reading </a>
 					</div>
 				</div>
 				<?php endwhile; else:?>
