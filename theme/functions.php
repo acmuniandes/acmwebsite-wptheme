@@ -355,7 +355,7 @@ function log_in_user(){
 		if(is_single()){
 			echo json_encode(array('reload' => true));
 		} else {
-			echo '<span id ="user-info" class="user-info"><i class="icon-user"></i>&nbsp;&nbsp;'. $username .' - <span class="log-out">Logout</span></span>';
+			echo '<span id ="user-info" class="user-info"><i class="icon-user"></i>&nbsp;&nbsp;<span id="user-login">'. $username .'</span> - <span id="logged-in" class="log-out">Logout</span></span>';
 		}
 	}
 	 

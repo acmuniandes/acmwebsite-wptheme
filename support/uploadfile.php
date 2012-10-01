@@ -5,25 +5,27 @@
  * @Torneo de Robocode - (Archivos ZIP)
  * @Fotografia - (Archivos ZIP)
  */
+ini_set('display_errors', 'On');
+error_reporting(E_ALL);
 
 
 if(isset($_POST["login"]) && isset($_POST["submission"]))
 {
 
 	//Ocurrio un error al subir el archivo.
-	if($_FILES["file"]["error"] > 0){
+	if($_FILES["file-input"]["error"] > 0){
 		echo "Ocurrio un error al subir el archivo. Por favor intentarlo de nuevo";
 	}else
 	{
-		$type = $_FILES["file"]["type"];
+		$type = $_FILES["file-input"]["type"];
 		$login = $_POST["login"];
 		$submission = $_POST["submission"];
 
 		//Validar el tipo de archivo.
 		$allowedExtension = "zip";
-		$extension = end(explode(".", $_FILES["file"]["name"]));
-		$size = $_FILES["file"]["size"]/1024;
-		$maxSize = ($submission = "robocode") ? 1000 : 5000 ;	
+		$extension = end(explode(".", $_FILES["file-input"]["name"]));
+		$size = $_FILES["file-input"]["size"]/1024;
+		$maxSize = ($submission = "robocode") ? 1000 : 5000 ;
 
 
 		if($allowedExtension == $extension && $size <= $maxSize && $type == "application/zip"){
@@ -39,12 +41,14 @@ if(isset($_POST["login"]) && isset($_POST["submission"]))
 			}
 
 			//Sube el archivo.
-			move_uploaded_file($_FILES["file"]["tmp_name"], $ruta);
-			echo "El archivo se subio de forma correcta";
+			if(move_uploaded_file($_FILES["file-input"]["tmp_name"], $ruta))
+				echo json_encode(array('type'=>'success' , 'msg' =>'El archivo se subio de forma correcta'));
+			else
+				echo json_encode(array('type'=>'error', 'msg'=> 'Oh Uh! Se presento un error al escribir el archivo. Intentalo nuevamente'));
 
 		}else
 		{
-			echo "No se cumple con los requisitos de subida";
+			echo json_encode(array('type'=>'error', 'msg' => 'No se cumple con los requisitos de subida'));
 		}
 
 	}
