@@ -62,7 +62,7 @@ var support =  (function(jQuery){
 				{
 					if(response){
 						custom_alert('Well Done!', 'You have successfully logged out.', 'success');
-						if (response.reload) {
+						if (!$('.page-header small').text().match(/^Cap.+Andes$/i)) {
 							document.location.reload();
 						} else {
 							jQuery('#user-info').remove();
@@ -102,7 +102,7 @@ var support =  (function(jQuery){
 					{
 						if(response){
 							custom_alert('Well Done!', 'You have successfully logged in.', 'success');
-							if (response.reload) {
+							if (!$('.page-header small').text().match(/^Cap.+Andes$/i)) {
 								document.location.reload();
 							} else {
 								jQuery('#user-info').remove();
