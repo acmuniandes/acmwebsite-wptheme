@@ -110,7 +110,7 @@ var support =  (function(jQuery){
 								bind_logout_btn(jQuery('#user-info .log-out'));
 							}
 						} else {
-							custom_alert('Oops!', 'Better check yoself.', 'error');
+							custom_alert('Oops!', 'Better check yoself you scruffy-looking nerf herder.', 'error');
 						}
 					}
 				});
