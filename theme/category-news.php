@@ -26,7 +26,7 @@
 		
 		   <div><?php
 		   $chars =  1400;
-		   if($numpost>2) $chars = 470; 
+		   if($numpost>2) $chars = 570; 
 		   the_content_limit($chars, ""); ?></div>
 		
 		<a class="pull-right" href="<?php the_permalink() ?>" rel="bookmark" title="permanent link to <?php the_title_attribute(); ?>">Keep on Reading </a>
