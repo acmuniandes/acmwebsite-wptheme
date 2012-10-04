@@ -29,7 +29,7 @@
 		   if($numpost>2) $chars = 570; 
 		   the_content_limit($chars, ""); ?></div>
 		
-		<a class="pull-right" href="<?php the_permalink() ?>" rel="bookmark" title="permanent link to <?php the_title_attribute(); ?>">Keep on Reading </a>
+	   <a class="pull-right" href="<?php the_permalink() ?>" rel="bookmark" title="permanent link to <?php the_title_attribute(); ?>"><?php _e('Keep on Reading','acmtheme'); ?></a>
 	 </div> 
 	 
 	 <?php  if(($numpost == 2) || ($numpost == 5)) echo '</div>'; ?> 
@@ -53,7 +53,7 @@
 	</div><!--main content-->
 		
 	<?php else:?>
-	<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+	<p><?php _e('Sorry, no posts matched your criteria.','acmtheme'); ?></p>
 	</div><!--end upper news -->
 	</div> 
     </div>

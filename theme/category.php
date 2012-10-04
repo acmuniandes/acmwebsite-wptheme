@@ -17,11 +17,11 @@
 						<?php the_title("<h2>", "</h2>"); ?>
 						<br />
 						<?php the_content_limit(1700, ""); ?>
-						<a class="pull-right" href="<?php the_permalink() ?>" rel="bookmark" title="permanent link to <?php the_title_attribute(); ?>">Keep on Reading </a>
+						<a class="pull-right" href="<?php the_permalink() ?>" rel="bookmark" title="permanent link to <?php the_title_attribute(); ?>"><?php _e('Keep on Reading','acmtheme'); ?></a>
 					</div>
 				</div>
 				<?php endwhile; else:?>
-					<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+					<p><?php _e('Sorry, no posts matched your criteria.','acmtheme'); ?></p>
 				<?php endif; ?>
 			</div>
 			<!--Pagination business-->

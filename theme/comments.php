@@ -1,6 +1,6 @@
 <?php if( have_comments() ): ?>
 <div class="comment-results">
-	<h3> <?php echo _('Comments'); ?> <small><?php comments_number('No responses','One Response','% Responses'); ?></small></h3>
+	<h3> <?php _e('Comments','acmtheme'); ?> <small><?php comments_number( __('No responses','acmtheme'),__('One Response','acmtheme'),__('% Responses','acmtheme')); ?></small></h3>
 
 		<div id="comments">
 			<?php wp_list_comments(array('callback'=>'display_custom_comment')); ?>
@@ -21,7 +21,7 @@
 <?php endif; ?>
 <?php  if( comments_open()) : ?>
 <!--Button to trigger modal-->
-<a  id="comment-button" href="#comment-form" role="button" class="btn btn-primary pull-right" data-toggle="modal"><?php echo _('Talk to us!') ?></a>
+<a  id="comment-button" href="#comment-form" role="button" class="btn btn-primary pull-right" data-toggle="modal"><?php _e('Talk to us!','acmtheme'); ?></a>
 <!--Comment form-->
 <div id="comment-form" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<?php custom_comment_form(); ?>

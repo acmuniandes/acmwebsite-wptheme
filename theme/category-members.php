@@ -32,7 +32,7 @@
 			<?php endwhile; ?>
 			<?php if($numpost % 4 != 0 ) echo "</div> <!--closing it-->"; ?>
 			<?php else:?>
-				<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+				<p><?php _e('Sorry, no posts matched your criteria.','acmtheme'); ?></p>
 			<?php endif; ?>
 		</div>
 		<!--Pagination business-->

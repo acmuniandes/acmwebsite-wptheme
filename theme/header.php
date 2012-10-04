@@ -35,6 +35,6 @@
 			<?php if( !is_user_logged_in()) : ?>
 				<a id ="user-info" href="#login-form" class="user-info" data-toggle="modal"><i class="icon-user"></i></a>
 			<?php else: global $user_login; get_currentuserinfo();?>
-			<span id ="user-info" class="user-info"><i class="icon-user"></i>&nbsp;&nbsp;<span id="user-login"><?php echo $user_login; ?></span> - <span id="logged-in" class="log-out">Logout</span></span>
+			<span id ="user-info" class="user-info"><i class="icon-user"></i>&nbsp;&nbsp;<span id="user-login"><?php echo $user_login; ?></span> - <span id="logged-in" class="log-out"><?php _e('Logout','acmtheme'); ?></span></span>
 			<?php endif; ?>
 		<?php endif; ?>
