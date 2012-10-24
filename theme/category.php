@@ -11,11 +11,10 @@
 			<div class="row-fluid posts projects" >
 				<?php 
 				$numpost = 0; 
-				if ( have_posts() ) : while ( have_posts() ) : the_post(); $numpost++; ?>
+				if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 				<div class="span6">
-					<div id="post-<?php the_ID(); ?>" <?php $numpost==1? $clss="pull-left": $clss="pull-right"; post_class($clss);?> >
+					<div id="post-<?php the_ID(); ?>">
 						<?php the_title("<h2>", "</h2>"); ?>
-						<br />
 						<?php the_content_limit(1700, ""); ?>
 						<a class="pull-right" href="<?php the_permalink() ?>" rel="bookmark" title="permanent link to <?php the_title_attribute(); ?>"><?php _e('Keep on Reading','acmtheme'); ?></a>
 					</div>
